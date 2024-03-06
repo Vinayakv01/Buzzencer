@@ -18,7 +18,7 @@
 //           <div className="flex items-center mx-0">
 //             <img src="/home/buzzencer_logo.svg" alt="Logo" />
 //           </div>
-  
+
 //           {/* Navigation Links */}
 //           <ul className="flex space-x-4">
 //             <li>
@@ -43,15 +43,15 @@
 //               </a>
 //             </li>
 //           </ul>
-  
+
 //           {/* Sign In Button */}
 //           <button className="bg-[#403BBF] hover:bg-blue-600 text-white  font-semibold text-center pt-2.5  py-2 px-10 rounded-full">
 //             Sign In
 //           </button>
 //         </div>
 //       </nav>
-      
-          
+
+
 //       {/* Main content */}
 //       <div className="ml-64">
 //         {/* Your main content goes here */}
@@ -65,6 +65,7 @@
 
 import React, { useState } from 'react';
 import buzzencer_logo from "../../assets/buzzencer_logo.svg";
+import { Link } from 'react-router-dom';
 
 
 const Navbar = () => {
@@ -85,7 +86,7 @@ const Navbar = () => {
           <div className="flex items-center mx-0">
             <img src={buzzencer_logo} alt="Logo" />
           </div>
-  
+
           {/* Navigation Links */}
           <ul className="flex space-x-4">
             <li>
@@ -110,15 +111,18 @@ const Navbar = () => {
               </a>
             </li>
           </ul>
-  
+
           {/* Sign In Button */}
-          <button className="bg-[#403BBF] hover:bg-blue-600 text-white  font-semibold text-center pt-2.5  py-2 px-10 rounded-full">
-            Sign In
-          </button>
+
+          <Link to="/signin">
+            <button className="bg-[#403BBF] hover:bg-blue-600 text-white font-semibold text-center pt-2.5 py-2 px-10 rounded-full">
+              Sign In
+            </button>
+          </Link>
         </div>
       </nav>
-      
-          
+
+
       {/* Main content */}
       <div className="ml-64">
         {/* Your main content goes here */}
