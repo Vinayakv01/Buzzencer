@@ -3,11 +3,10 @@ import Influencer from '../influencer/influencer';
 import Home from '../home/home';
 import Login from '../login/login';
 import Signup from '../login/signup';
+import {Routes, Route,} from 'react-router-dom';
 
-import {
-    BrowserRouter, Routes, Route,
-  } from 'react-router-dom';
-const routes = () => {
+
+const Router = () => {
   return (
     <Routes>
       <Route path="/signup" element={<Signup/>}/>
@@ -18,4 +17,4 @@ const routes = () => {
   )
 }
 
-export default routes;
+export default Router;

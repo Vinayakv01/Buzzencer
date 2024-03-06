@@ -1,10 +1,11 @@
 // "use client"
 import React from 'react'
-import Routes from './components/routes/routes'
+import Router from './components/routes/routes'
+
 const App = () => {
   return (
     <div>
-      <Routes/>
+      <Router/>
     </div>
   )
 }
