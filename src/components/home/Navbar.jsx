@@ -64,7 +64,7 @@
 
 
 import React, { useState } from 'react';
-
+import buzzencer_logo from "../../assets/buzzencer_logo.svg"
 
 
 const Navbar = () => {
@@ -83,7 +83,7 @@ const Navbar = () => {
         <div className="container mx-auto flex justify-between items-center">
           {/* Logo */}
           <div className="flex items-center mx-0">
-            <img src="public\images\buzzencer_logo.svg" alt="Logo" />
+            <img src={buzzencer_logo} alt="Logo" />
           </div>
   
           {/* Navigation Links */}
