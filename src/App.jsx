@@ -1,12 +1,12 @@
 // "use client"
 import React from 'react'
-import Router from './components/routes/routes'
+import Routing from './components/routes/routes'
 
 const App = () => {
   return (
-    <div>
-      <Router/>
-    </div>
+    <>
+      <Routing/>
+    </>
   )
 }
 

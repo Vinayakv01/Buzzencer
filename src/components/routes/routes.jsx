@@ -6,7 +6,7 @@ import Signup from '../login/signup';
 import {Routes, Route,} from 'react-router-dom';
 
 
-const Router = () => {
+const Routing = () => {
   return (
     <Routes>
       <Route path="/signup" element={<Signup/>}/>
@@ -17,4 +17,4 @@ const Router = () => {
   )
 }
 
-export default Router;
+export default Routing;
