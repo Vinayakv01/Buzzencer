@@ -1,5 +1,6 @@
 import React from "react";
 import loginImg from "../../assets/login.svg";
+import { Link } from 'react-router-dom';
 
 const Login = () => {
   return (
@@ -46,9 +47,10 @@ const Login = () => {
           <p className="mt-4 text-sm text-gray-600">
             Forgot your password? <a href="#" className="text-blue-500">Reset here</a>.
           </p>
-          <p className="mt-2 text-sm text-gray-600">
-            Don't have an account? <a href="signup" className="text-blue-500">Sign up</a>.
-          </p>
+
+         <p className="mt-2 text-sm text-gray-600">
+          Don't have an account? <Link to="/signup" className="text-blue-500">Sign up</Link>.
+         </p>
         </form>
       </div>
     </div>
