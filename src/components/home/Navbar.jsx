@@ -64,7 +64,7 @@
 
 
 import React, { useState } from 'react';
-import buzzencer_logo from "../../assets/buzzencer_logo.svg"
+import buzzencer_logo from "../../assets/buzzencer_logo.svg";
 
 
 const Navbar = () => {

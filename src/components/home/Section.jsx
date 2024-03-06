@@ -22,14 +22,14 @@
 
 
 import React from 'react';
-
+import about from "../../assets/about-buzzencer.webp"
 const Section = () => {
   return (
     <section className="container mx-auto py-12 px-4 lg:px-0">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         {/* SVG Image on the Left */}
         <div>
-          <img src="public\images\about-buzzencer.webp" alt="SVG Image" className="w-[421px]  h-[500px] mx-auto mb-6" />
+          <img src={about} alt="SVG Image" className="w-[421px]  h-[500px] mx-auto mb-6" />
         </div>
         {/* Heading and Paragraph on the Right */}
         <div>

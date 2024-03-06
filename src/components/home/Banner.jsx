@@ -1,10 +1,12 @@
 import React from 'react';
+import bghome from "../../assets/bghome.svg";
+import banners from "../../bnnr-pic.webp";
 
 const Banner = () => {
   return (
     <div className="banner-container relative">
       {/* Background Image */}
-      <img src="public\images\bghome.webp" alt="Background" className="w-full h-auto" />
+      <img src={bghome} className="w-full h-auto" />
 
       {/* Text and Button */}
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
@@ -14,7 +16,7 @@ const Banner = () => {
       </div>
 
       {/* Additional Image */}
-      <img src="public\images\bnnr-pic.webp" alt="Additional" className="absolute top-0 right-0 w-1/4 md:w-1/5 mt-10 md:mt-16 mr-8 md:mr-16" />
+      <img src={banners} alt="Additional" className="absolute top-0 right-0 w-1/4 md:w-1/5 mt-10 md:mt-16 mr-8 md:mr-16" />
     </div>
   );
 };

@@ -183,7 +183,7 @@ import { CiTwitter } from "react-icons/ci";
 import { IoLogoInstagram } from "react-icons/io";
 import { SlSocialLinkedin } from "react-icons/sl";
 import Wave from 'react-wavify'
-
+import logo from "../../assets/buzzencer_logo.svg";
 
 const Footer = () => {
   return (
@@ -210,7 +210,7 @@ const Footer = () => {
         <div className="grid grid-cols-4 gap-4">
           {/* Logo */}
           <div>
-            <img src="/images/buzzencer_logo.svg" alt="Logo" />
+            <img src={logo} alt="Logo" />
             <div className='text-gray-400'>
               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s,</p>
             </div>
