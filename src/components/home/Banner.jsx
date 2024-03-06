@@ -1,6 +1,6 @@
 import React from 'react';
-import bghome from "../../assets/bghome.svg";
-import banners from "../../bnnr-pic.webp";
+import bghome from "../../assets/bghome.webp";
+import banners from "../../assets/bnnr-pic.webp";
 
 const Banner = () => {
   return (
