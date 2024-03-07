@@ -14,7 +14,9 @@ const NavBar = () => {
     <nav className="py-4 px-8 bg-transparent">
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center space-x-2">
+          <Link to="/">
           <img src={buzzencer_logo} alt="G Logo" className="h-9" />
+          </Link>
         </div>
 
         <div className="block lg:hidden">
