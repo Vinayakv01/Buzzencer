@@ -1,61 +1,58 @@
 import React from 'react';
+import love from "../../assets/logo/love.png";
+import creative from "../../assets/logo/creative.png";
+import world from "../../assets/logo/world.png";
+import doc from "../../assets/logo/doc.png";
 
 const WhatWeDo = () => {
   return (
-    <section className="bg-gray-200 py-12">
-      <div className="container mx-auto">
-        <div className="text-center mb-8">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-4">What We Do</h2>
-          <p className="text-sm lg:text-base text-gray-600">Sample text in small font size</p>
+    <section className="bg-gray-50 py-12">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl lg:text-4xl  font-Yeseva mb-6 mt-6">What We Do</h2>
+          <p className="text-sm lg:text-base text-gray-600">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been<br/> the industry's standard dummy text. Lorem Ipsum is simply dummy text of the printing and<br/>
+            typesetting industry. Lorem Ipsum has been the industry's standard dummy text.
+          </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {/* Discovery of Influencers */}
-          <div className="bg-gradient-to-b from-gray-300 to-gray-400 p-6 rounded-lg border-2 border-white">
-            <div className="flex justify-center items-center bg-white h-16 w-16 rounded-full mb-4 mx-auto">
-              {/* Your icon component here */}
-              <svg className="w-8 h-8 text-gray-600" viewBox="0 0 20 20" fill="currentColor">
-                {/* Your icon SVG content here */}
-              </svg>
-            </div>
-            <h3 className="text-lg font-semibold mb-2">Discovery of Influencers</h3>
-            <p className="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </div>
-          {/* Creative Strategies and Direction */}
-          <div className="bg-gradient-to-b from-gray-300 to-gray-400 p-6 rounded-lg border-2 border-white">
-            <div className="flex justify-center items-center bg-white h-16 w-16 rounded-full mb-4 mx-auto">
-              {/* Your icon component here */}
-              <svg className="w-8 h-8 text-gray-600" viewBox="0 0 20 20" fill="currentColor">
-                {/* Your icon SVG content here */}
-              </svg>
-            </div>
-            <h3 className="text-lg font-semibold mb-2">Creative Strategies and Direction</h3>
-            <p className="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </div>
-          {/* Coordinate and Activation */}
-          <div className="bg-gradient-to-b from-gray-300 to-gray-400 p-6 rounded-lg border-2 border-white">
-            <div className="flex justify-center items-center bg-white h-16 w-16 rounded-full mb-4 mx-auto">
-              {/* Your icon component here */}
-              <svg className="w-8 h-8 text-gray-600" viewBox="0 0 20 20" fill="currentColor">
-                {/* Your icon SVG content here */}
-              </svg>
-            </div>
-            <h3 className="text-lg font-semibold mb-2">Coordinate and Activation</h3>
-            <p className="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </div>
-          {/* Detailed Reporting and Insights */}
-          <div className="bg-gradient-to-b from-gray-300 to-gray-400 p-6 rounded-lg border-2 border-white">
-            <div className="flex justify-center items-center bg-white h-16 w-16 rounded-full mb-4 mx-auto">
-              {/* Your icon component here */}
-              <svg className="w-8 h-8 text-gray-600" viewBox="0 0 20 20" fill="currentColor">
-                {/* Your icon SVG content here */}
-              </svg>
-            </div>
-            <h3 className="text-lg font-semibold mb-2">Detailed Reporting and Insights</h3>
-            <p className="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <CardComponent
+            icon={love}
+            title="Discovery of Influencers"
+            description="Lorem Ipsum is simply dummy text of the printing typesetting industry."
+          />
+          <CardComponent
+            icon={creative}
+            title="Creative Strategies and Direction"
+            description="Lorem Ipsum is simply dummy text of the printing typesetting industry."
+          />
+          <CardComponent
+            icon={world}
+            title="Coordinate and Activation"
+            description="Lorem Ipsum is simply dummy text of the printing typesetting industry."
+          />
+          <CardComponent
+            icon={doc}
+            title="Detailed Reporting and Insights"
+            description="Lorem Ipsum is simply dummy text of the printing typesetting industry."
+          />
         </div>
       </div>
     </section>
+  );
+};
+
+const CardComponent = ({ icon, title, description }) => {
+  return (
+    <div className="bg-gradient-to-b from-[#F2F2F9] to-[#DFDFE1] p-6 rounded-3xl flex flex-col border-2 border-white">
+      <div className="bg-white h-20 w-20 rounded-full mb-4 shadow-blue-gradient">
+        <img src={icon} alt="icon" className="h-full w-full object-contain" />
+      </div>
+      <h3 className="text-xl font-semibold mb-2">{title}</h3>
+      <p className="text-gray-700">{description}</p>
+    </div>
   );
 };
 

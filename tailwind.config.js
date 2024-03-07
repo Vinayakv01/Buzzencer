@@ -6,7 +6,16 @@ export default {
 
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+        Yeseva:["Yeseva One", 'sans-serif'],
+        Montserrat:["Montserrat", 'sans-serif'],
+        Poppins:["Poppins", 'sans-serif'],
+  
+  
+      },
+
+    },
   },
   plugins: [],
 }

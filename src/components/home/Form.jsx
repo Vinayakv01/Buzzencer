@@ -3,50 +3,77 @@ import React from 'react';
 const ContactForm = () => {
   return (
     <div className="container mx-auto">
-      <h2 className="text-2xl font-bold text-center mb-4 font-yeseva">GET IN TOUCH WITH US</h2>
-      <form className="max-w-md mx-auto">
-        <div className="grid grid-cols-2 gap-4 mb-4">
-          <div>
+      <h2 className="text-4xl  font-Yeseva text-center mb-6 mt-20 font-yeseva">Get In Touch With Us</h2>
+      <form className="mx-auto max-w-4xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 font-Montserrat">
+          <div className="mb-4">
+            <label htmlFor="name" className="block text-gray-600  font-semibold mb-2">
+              Name
+            </label>
             <input
               type="text"
-              className="w-full rounded-full border border-gray-300 px-4 py-2 focus:outline-none focus:border-blue-400"
-              placeholder="Your Name"
+              id="name"
+              name="name"
+              className="w-full text-sm border p-3 rounded-full"
+              placeholder="Enter Name"
             />
           </div>
-          <div>
+          <div className="mb-4">
+            <label htmlFor="phone" className="block text-gray-600 font-semibold mb-2">
+              Phone No
+            </label>
             <input
               type="tel"
-              className="w-full rounded-full border border-gray-300 px-4 py-2 focus:outline-none focus:border-blue-400"
-              placeholder="Phone Number"
+              id="phone"
+              name="phone"
+              className="w-full text-sm border p-3 rounded-full"
+              placeholder="Enter Phone No"
             />
           </div>
-          <div>
+          <div className="mb-4">
+            <label htmlFor="email" className="block text-gray-600 font-semibold mb-2">
+              Email Id
+            </label>
             <input
               type="email"
-              className="w-full rounded-full border border-gray-300 px-4 py-2 focus:outline-none focus:border-blue-400"
-              placeholder="Email Address"
+              id="email"
+              name="email"
+              className="w-full text-sm border p-3 rounded-full"
+              placeholder="Enter Email Id"
             />
           </div>
-          <div>
+          <div className="mb-4">
+            <label htmlFor="subject" className="block text-gray-600 font-semibold mb-2">
+              Subject
+            </label>
             <input
               type="text"
-              className="w-full rounded-full border border-gray-300 px-4 py-2 focus:outline-none focus:border-blue-400"
-              placeholder="Subject"
+              id="subject"
+              name="subject"
+              className="w-full text-sm border p-3 rounded-full"
+              placeholder="Enter Subject"
             />
           </div>
         </div>
-        <div className="mb-6">
+        <div className="mb-10 font-Montserrat">
+          <label htmlFor="message" className="block text-gray-600 font-semibold  mb-2">
+            Message
+          </label>
           <textarea
-            className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:border-blue-400"
-            placeholder="Your Message"
-            rows="4"
+            id="message"
+            name="message"
+            rows="6"
+            className="shadow-sm  mt-1  w-full sm:text-sm border  rounded-3xl p-3"
+            placeholder="Message"
+            style={{ resize: 'none' }}
           ></textarea>
         </div>
+
         
-        <div className="flex justify-center">
+        <div className="flex mb-16 text-sm font-Montserrat font-semibold justify-center">
           <button
             type="submit"
-            className="w-40  bg-[#403BBF] text-white rounded-full py-2 px-4"
+            className=" bg-[#403BBF] text-white rounded-full pt-3.5 pb-4 px-8 "
           >
             Submit
           </button>

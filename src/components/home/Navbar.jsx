@@ -1,135 +1,78 @@
-// import React, { useState } from 'react';
-// import Influencer from '../influencer/Influencer/';
-// const Navbar = () => {
-//   // State variable to track sidebar visibility
-//   const [showSidebar, setShowSidebar] = useState(false);
-
-//   // Function to toggle sidebar visibility
-//   const toggleSidebar = () => {
-//     setShowSidebar(!showSidebar);
-//   };
-
-//   return (
-//     <div>
-//       {/* Navigation */}
-//       <nav className="bg-white-800 p-4">
-//         <div className="container mx-auto flex justify-between items-center">
-//           {/* Logo */}
-//           <div className="flex items-center mx-0">
-//             <img src="/home/buzzencer_logo.svg" alt="Logo" />
-//           </div>
-
-//           {/* Navigation Links */}
-//           <ul className="flex space-x-4">
-//             <li>
-//               <a href="/" className="text-black font-medium text-lg ml-6 mb-7">
-//                 Home
-//               </a>
-//             </li>
-//             <li>
-//               <a href="/about" className="text-black font-medium text-lg ml-6 mb-7">
-//                 About Us
-//               </a>
-//             </li>
-//             <li>
-//               <a href="/contact" className="text-black font-medium text-lg ml-6 mb-7">
-//                 Contact Us
-//               </a>
-//             </li>
-//             <li>
-//               {/* Clicking this link toggles the sidebar */}
-//               <a href="/Influencer" className="text-black font-medium text-lg ml-6 mb-7">
-//                 Influencer
-//               </a>
-//             </li>
-//           </ul>
-
-//           {/* Sign In Button */}
-//           <button className="bg-[#403BBF] hover:bg-blue-600 text-white  font-semibold text-center pt-2.5  py-2 px-10 rounded-full">
-//             Sign In
-//           </button>
-//         </div>
-//       </nav>
-
-
-//       {/* Main content */}
-//       <div className="ml-64">
-//         {/* Your main content goes here */}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Navbar;
-
-
 import React, { useState } from 'react';
-import buzzencer_logo from "../../assets/buzzencer_logo.svg";
-import { Link } from 'react-router-dom';
+import buzzencer_logo from '../../assets/buzzencer_logo.svg';
+import { Link, useLocation } from 'react-router-dom';
 
+const NavBar = () => {
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
-const Navbar = () => {
-  // State variable to track sidebar visibility
-  const [showSidebar, setShowSidebar] = useState(false);
-
-  // Function to toggle sidebar visibility
-  const toggleSidebar = () => {
-    setShowSidebar(!showSidebar);
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!isMobileMenuOpen);
   };
 
   return (
-    <div>
-      {/* Navigation */}
-      <nav className="bg-white-800 p-4">
-        <div className="container mx-auto flex justify-between items-center">
-          {/* Logo */}
-          <div className="flex items-center mx-0">
-            <img src={buzzencer_logo} alt="Logo" />
+    <nav className="py-4 px-8 bg-transparent">
+      <div className="container mx-auto flex justify-between items-center">
+        <div className="flex items-center space-x-2">
+          <img src={buzzencer_logo} alt="G Logo" className="h-9" />
+        </div>
+
+        <div className="block lg:hidden">
+          <button
+            onClick={toggleMobileMenu}
+            className="text-white focus:outline-none"
+          >
+            &#9776;
+          </button>
+        </div>
+
+        <div className="hidden lg:flex space-x-5 items-center">
+          <div className="space-x-6  flex items-center">
+            <Link
+              to="/"
+              className={`text-lg ${location.pathname === '/' ? 'text-blue-600' : 'text-black'} hover:text-gray-500`}
+            >
+              Home
+            </Link>
+            <Link
+              to="/about"
+              className={`text-lg ${location.pathname === '/about' ? 'text-blue-600' : 'text-black'} hover:text-gray-500`}
+            >
+              About us
+            </Link>
+            <Link
+              to="/contact"
+              className={`text-lg ${location.pathname === '/contact' ? 'text-blue-600' : 'text-black'} hover:text-gray-500`}
+            >
+              Contact Us
+            </Link>
           </div>
 
-          {/* Navigation Links */}
-          <ul className="flex space-x-4">
-            <li>
-              <a href="/" className="text-black font-medium text-lg ml-6 mb-7">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="/about" className="text-black font-medium text-lg ml-6 mb-7">
-                About Us
-              </a>
-            </li>
-            <li>
-              <a href="/contact" className="text-black font-medium text-lg ml-6 mb-7">
-                Contact Us
-              </a>
-            </li>
-            <li>
-              {/* Clicking this link toggles the sidebar */}
-              <a href="/Influencer" className="text-black font-medium text-lg ml-6 mb-7">
-                Influencer
-              </a>
-            </li>
-          </ul>
-
-          {/* Sign In Button */}
-
-          <Link to="/signin">
-            <button className="bg-[#403BBF] hover:bg-blue-600 text-white font-semibold text-center pt-2.5 py-2 px-10 rounded-full">
-              Sign In
-            </button>
+          <Link
+            to="/signin"
+            className="text-white text-lg px-8 py-2  bg-[#403bbf] rounded-full hover:bg-opacity-75 transition duration-300"
+          >
+            Sign-in
           </Link>
         </div>
-      </nav>
-
-
-      {/* Main content */}
-      <div className="ml-64">
-        {/* Your main content goes here */}
       </div>
-    </div>
+
+      {isMobileMenuOpen && (
+        <div className="lg:hidden mt-2 space-y-2">
+          <Link to="/" className={`text-white block  ${location.pathname === '/' ? 'hover:text-gray-500' : ''}`}>
+            Home
+          </Link>
+          <Link to="/about" className={`text-white block  ${location.pathname === '/about' ? 'hover:text-gray-500' : ''}`}>
+            About us
+          </Link>
+          <Link to="/contact" className={`text-white block  ${location.pathname === '/contact' ? 'hover:text-gray-500' : ''}`}>
+            Contact Us
+          </Link>
+          <Link to="/signin" className=" hover:text-gray-500">Login</Link>
+        </div>
+      )}
+    </nav>
   );
 };
 
-export default Navbar;
-
+export default NavBar;
