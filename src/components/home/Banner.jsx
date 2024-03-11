@@ -8,83 +8,96 @@ import linkedin from "../../assets/logo/linkedin.svg";
 import snapchat from "../../assets/logo/snapchat.svg";
 import twitter from "../../assets/logo/twitter.svg";
 import youtube from "../../assets/logo/youtube.svg";
+import userone from "../../assets/userone.png";
+import usertwo from "../../assets/usertwo.png";
+import './banner.css';
 
 const Banner = () => {
 
-  const iconStyle = {
-    transition: 'transform 5s ease-in-out',
-    animation: 'zoom-in-zoom-out 1s ease infinite',
-  };
 
-  
+
+
 
 
   return (
     <div>
+      {/* section-1  */}
 
-{/* section-1  */}
+      <div className="bg-cover bg-center" style={{ backgroundImage: `url(${bghome})` }}>
+
+        <div className=" container h-full mx-auto flex">
+
+          {/* Text Content on the Left */}
+          <div className="w-full md:w-1/2 ml-4 md:ml-36  flex flex-col items-start justify-center text-white">
+            <h1 className="text-4xl font-Yeseva text-black">A WORLD WHERE YOU <br /> GET PAID TO <span className="text-[#403bbf]">SHOOT </span></h1>
+            <p className="mt-4 text-black text-md">Lorem Ipsum is simply dummy text of the printing and <br />typesetting industry. Lorem Ipsum has been the industry's <br /> standard dummy text.</p>
+            <button className="mt-6 px-8 pt-1.5 pb-2 bg-[#403bbf] hover:bg-blue-600 text-white font-semibold rounded-full">Create Campaign</button>
+          </div>
+
+          {/* Image on the Right */}
+          <div className=" mt-40  w-1/2 ">
+            <img src={banners} alt="Your Image" className="relative -top-10 left-10 object-cover" />
 
 
-<div className="relative h-screen bg-cover bg-center" style={{ backgroundImage: `url(${bghome})` }}>
-  <div className="absolute inset-0 flex items-center justify-between">
-    {/* Text Content on the Left */}
-    <div className="w-full md:w-1/2 ml-4 md:ml-36 ml flex flex-col items-start justify-center text-white">
-      <h1 className="text-4xl font-Yeseva text-black">A WORLD WHERE YOU <br /> GET PAID TO <span className="text-[#403bbf]">SHOOT </span></h1>
-      <p className="mt-4 text-black text-md">Lorem Ipsum is simply dummy text of the printing and <br />typesetting industry. Lorem Ipsum has been the industry's <br/> standard dummy text.</p>
-      <button className="mt-6 px-8 pt-1.5 pb-2 bg-[#403bbf] hover:bg-blue-600 text-white font-semibold rounded-full">Create Campaign</button>
-    </div>
+            <div className="instagram-logo bg-white rounded-full p-4 shadow-xl relative bottom-[280px] ">
+              <img src={instagram} alt="instagram" className="w-[30px]" />
+            </div>
 
-    {/* Image on the Right */}
-    <div className="hidden lg:flex items-center justify-center w-1/2 relative">
-  <img src={banners} alt="Your Image" className="relative -top-8 right-20 object-cover" />
-  
-  <div className="absolute flex items-center space-x-4 top-1/2 transform -translate-y-1/2">
-              <div className="bg-white rounded-full p-3 flex items-center justify-center " style={iconStyle}>
-                <img src={instagram} alt="instagram" className="h-8" />
+            <div className="twitter-logo bg-white rounded-full p-4 shadow-xl relative right-32 bottom-[430px]  ">
+              <img src={twitter} alt="twitter" className="w-[40px]" />
+            </div>
+
+            <div className="youtube-logo bg-white rounded-full p-3 shadow-xl relative right-[60px] bottom-[460px] ">
+              <img src={youtube} alt="youtube" className="w-[25px]" />
+            </div>
+
+            <div className="linkedin-logo bg-white rounded-full p-4 shadow-xl relative left-10 bottom-[530px] ">
+              <img src={linkedin} alt="linkedin" className="w-[25px]" />
+            </div>
+
+            <div className="facebook-logo bg-white rounded-full p-4 shadow-xl relative left-[190px] bottom-[380px]">
+              <img src={facebook} alt="facebook" className="w-[40px]" />
+            </div>
+
+            <div className="snapchat-logo bg-white rounded-full p-4 shadow-xl relative left-[180px] bottom-[270px]">
+              <img src={snapchat} alt="snapchat" className="w-[24px]" />
+            </div>
+
+            <div className="font-Poppins relative left-10 bottom-[220px] flex w-40 items-center bg-opacity-50 backdrop-blur-lg bg-[rgba(1,1,1,0.1)] rounded-full px-4 py-4">
+              <img src={userone} alt="user" className="mr-3" />
+              <div className="text-black">Malini Dode</div>
+            </div>
+
+            <div className="font-Poppins relative left-[360px] bottom-[300px] flex w-40 items-center bg-opacity-50 backdrop-blur-lg bg-[rgba(1,1,1,0.1)] rounded-full px-4 py-4">
+              <img src={usertwo} alt="user" className="mr-3" />
+              <div className="text-black">Sam Dcruz</div>
+            </div>
+
+
+          </div>
+
+        </div>
+
+
+        {/* section-2 */}
+
+        <div>
+          <section className="container mx-auto  px-4 lg:px-0">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div className="transform translate-y-[-150px] translate-x-[40px]">
+                <img src={about} alt="SVG Image" className="w-[421px]  h-[500px] mx-auto" />
               </div>
-              <div className="bg-white rounded-full p-3 flex items-center justify-center" style={iconStyle}>
-                <img src={twitter} alt="twitter" className="h-8" />
-              </div>
-              <div className="bg-white rounded-full p-3 flex items-center justify-center" style={iconStyle}>
-                <img src={youtube} alt="youtube" className="h-8" />
-              </div>
-              <div className="bg-white rounded-full p-3 flex items-center justify-center" style={iconStyle}>
-                <img src={linkedin} alt="linkedin" className="h-8" />
-              </div>
-              <div className="bg-white rounded-full p-3 flex items-center justify-center" style={iconStyle}>
-                <img src={facebook} alt="facebook" className="h-8" />
-              </div>
-              <div className="bg-white rounded-full p-3 flex items-center justify-center" style={iconStyle}>
-                <img src={snapchat} alt="snapchat" className="h-8" />
+              {/* Heading and Paragraph on the Right */}
+              <div className="transform translate-y-[-150px] translate-x-[40px]" >
+            
+                <h2 className="text-3xl lg:text-4xl font-Yeseva mb-4">About Buzzencer</h2>
+                <p className="text-lg  text-gray-700 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <button className="pt-1.5 pb-2 bg-[#403bbf] hover:bg-blue-600 text-white font-semibold  px-4 rounded-full">Know More</button>
               </div>
             </div>
-</div>
-
-
-  </div>
-</div>
-
-
-{/* section-2 */}
-
-    <div>
-       <section className="container mx-auto  px-4 lg:px-0">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-        {/* SVG Image on the Left */}
-        <div className="transform translate-y-[-150px] translate-x-[40px]">
-          <img src={about} alt="SVG Image" className="w-[421px]  h-[500px] mx-auto mb-6" />
-        </div>
-        {/* Heading and Paragraph on the Right */}
-        <div className="transform translate-y-[-160px] translate-x-[40px]" >
-          <h2 className="text-3xl lg:text-4xl font-Yeseva mb-4">About Buzzencer</h2>
-          <p className="text-lg  text-gray-700 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <button className="pt-1.5 pb-2 bg-[#403bbf] hover:bg-blue-600 text-white font-semibold  px-4 rounded-full">Know More</button>
+          </section>
         </div>
       </div>
-    </section>
-    </div>
-
-
     </div>
   );
 };

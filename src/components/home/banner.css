@@ -1,0 +1,39 @@
+
+@keyframes zoomAnimation {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+
+  /* Adjust other styles as needed */
+.instagram-logo { display: inline-block;
+    animation: zoomAnimation 2s infinite;
+}
+  
+.twitter-logo { display: inline-block;
+    animation: zoomAnimation 2s infinite;
+}
+  
+.youtube-logo { display: inline-block;
+    animation: zoomAnimation 2s infinite;
+}
+  
+.linkedin-logo { display: inline-block;
+    animation: zoomAnimation 2s infinite;
+}
+  
+.facebook-logo { display: inline-block;
+    animation: zoomAnimation 2s infinite;
+}
+  
+.snapchat-logo { display: inline-block;
+    animation: zoomAnimation 2s infinite;
+}
+  

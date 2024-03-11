@@ -29,22 +29,22 @@ const NavBar = () => {
         </div>
 
         <div className="hidden lg:flex space-x-5 items-center">
-          <div className="space-x-6  flex items-center">
+          <div className="space-x-6 font-Poppins  flex items-center">
             <Link
               to="/"
-              className={`text-lg ${location.pathname === '/' ? 'text-blue-600' : 'text-black'} hover:text-gray-500`}
+              className={` ${location.pathname === '/' ? 'text-blue-600' : 'text-black'}  hover:text-gray-500`}
             >
               Home
             </Link>
             <Link
               to="/about"
-              className={`text-lg ${location.pathname === '/about' ? 'text-blue-600' : 'text-black'} hover:text-gray-500`}
+              className={` ${location.pathname === '/about' ? 'text-blue-600' : 'text-black'} hover:text-gray-500`}
             >
               About us
             </Link>
             <Link
               to="/contact"
-              className={`text-lg ${location.pathname === '/contact' ? 'text-blue-600' : 'text-black'} hover:text-gray-500`}
+              className={` ${location.pathname === '/contact' ? 'text-blue-600' : 'text-black'} hover:text-gray-500`}
             >
               Contact Us
             </Link>
@@ -52,7 +52,7 @@ const NavBar = () => {
 
           <Link
             to="/signin"
-            className="text-white text-lg px-8 py-2  bg-[#403bbf] rounded-full hover:bg-opacity-75 transition duration-300"
+            className="text-white text-sm font-[650] font-Poppins px-9 pt-2.5 pb-3  bg-[#403bbf] rounded-full hover:bg-opacity-75 transition duration-300"
           >
             Sign-in
           </Link>

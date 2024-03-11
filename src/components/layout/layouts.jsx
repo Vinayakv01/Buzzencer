@@ -7,7 +7,7 @@ import Footer from '../home/Footer';
 const Layout = () => {
   return (
     <div className="relative  min-h-screen">
-      <div className="absolute w-screen z-50">
+      <div className="absolute w-full z-50">
         {/* Navbar Component */}
         <Navbar />
       </div>
