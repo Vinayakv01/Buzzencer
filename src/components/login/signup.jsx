@@ -9,7 +9,7 @@ const Signup = () => {
       <div className="w-1/2 flex items-center justify-center">
         <form className="w-3/4 p-8 ">
           <h2 className="text-3xl font-semibold text-center font-Poppins mb-1">Create Your Free Account </h2>
-          <p className="text-center font-Poppins mb-6">Create your free account in Short-it. </p>
+          <p className="text-center font-Poppins mb-6">Create your free account in Buzzencer. </p>
 
           <div className="mb-4 font-Poppins">
             <label htmlFor="invitecode" className="block text-gray-600 mb-2 text-sm font-semibold">

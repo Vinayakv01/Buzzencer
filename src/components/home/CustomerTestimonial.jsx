@@ -3,7 +3,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import heart from "../../assets/heart.png";
-
+import coma from "../../assets/coma.png";
 const CustomerTestimonials = () => {
   const testimonies = [
     {
@@ -62,9 +62,13 @@ const CustomerTestimonials = () => {
             {/* Image */}
             <img src={heart} alt="Customer" className="w-full h-auto md:w-[500px] mx-auto " />
           </div>
-          <div className="w-3/4">
+          <div className=" font-Montserrat w-3/4">
             {/* Testimonies Carousel */}
-            <h3 className="text-lg font-bold text-gray-800 mb-2">What Our Customers Say</h3>
+            <h3 className="text-3xl flex justify-between font-semibold text-gray-800 mb-2">What Our Customers Say 
+            <span>
+              <img src={coma} alt="coma" className="h-6" />
+            </span>
+            </h3>
 
             <Slider {...settings} className="w-full">
               {testimonies.map((testimonial, index) => (
@@ -72,8 +76,8 @@ const CustomerTestimonials = () => {
                   <blockquote className="text-lg font-light text-gray-700 mb-2">
                     {testimonial.quote}
                   </blockquote>
-                  <p className="text-gray-500 font-semibold">{testimonial.author}</p>
-                  <p className="text-gray-500">{testimonial.company}</p>
+                  <p className="text-gray-500 font-semibold ">{testimonial.author}</p>
+                  <p className="text-gray-500 mb-4">{testimonial.company}</p>
                 </div>
               ))}
             </Slider>
