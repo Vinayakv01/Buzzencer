@@ -84,11 +84,11 @@ const Banner = () => {
         <div>
           <section className="container mx-auto  md:px-4 lg:px-0">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              <div className="transform translate-y-[-150px] translate-x-[40px]">
+              <div className="transform translate-y-[-150px] translate-x-[12px] md:translate-x-[40px]">
                 <img src={about} alt="SVG Image" className="lg:w-[420px] h-[400px] lg:h-[500px] " />
               </div>
               {/* Heading and Paragraph on the Right */}
-              <div className="mr-10 transform translate-y-[-150px] translate-x-[40px]" >
+              <div className="mr-10 transform translate-y-[-150px] translate-x-[40px] md:translate-x-[60px]" >
             
                 <h2 className="text-3xl lg:text-4xl font-Yeseva mb-4">About Buzzencer</h2>
                 <p className="text-lg  text-gray-700 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
