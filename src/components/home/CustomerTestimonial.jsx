@@ -60,9 +60,9 @@ const CustomerTestimonials = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
           <div>
             {/* Image */}
-            <img src={heart} alt="Customer" className="w-full h-auto md:w-[500px] mx-auto " />
+            <img src={heart} alt="Customer" className="w-full h-auto md:w-[500px] px-10 md:px-0 mb-8 md:mb-0 mx-auto " />
           </div>
-          <div className=" font-Montserrat w-3/4">
+          <div className=" font-Montserrat mx-auto w-3/4">
             {/* Testimonies Carousel */}
             <h3 className="text-3xl flex justify-between font-semibold text-gray-800 mb-2">What Our Customers Say 
             <span>

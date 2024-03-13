@@ -24,7 +24,7 @@ const Login = () => {
               id="username"
               name="username"
               className="w-full border px-6 pt-3 pb-3.5 rounded-full"
-              placeholder="Enter your username"
+              placeholder="Enter User Name"
             />
           </div>
           <div className="mb-4 font-Poppins">
@@ -36,7 +36,7 @@ const Login = () => {
               id="password"
               name="password"
               className="w-full border px-6 pt-3 pb-3.5 rounded-full"
-              placeholder="Enter your password"
+              placeholder="Enter Password"
             />
           </div>
         
