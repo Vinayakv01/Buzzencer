@@ -39,7 +39,7 @@ const Banner = () => {
             <img src={banners} alt="Your Image" className="relative xl:left-10 -top-10 left-6 md:left-14 w-10/12 md:w-10/12 xl:w-[425px] object-cover" />
 
 
-            <div className="instagram-logo bg-white rounded-full p-2 sm:p-4 shadow-xl relative bottom-[170px] sm:bottom-[230px] md:left-[20px] lg:right-0 md:bottom-[190px] lg:bottom-[280px] xl:bottom-[280px] ">
+            <div className="instagram-logo bg-white rounded-full p-2 sm:p-2 shadow-xl relative bottom-[170px] sm:bottom-[230px] md:left-[20px] lg:right-0 md:bottom-[190px] lg:bottom-[280px] xl:bottom-[280px] ">
               <img src={instagram} alt="instagram" className="sm:w-[30px] w-[20px]" />
             </div>
 
