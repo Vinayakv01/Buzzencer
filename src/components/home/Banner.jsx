@@ -28,14 +28,14 @@ const Banner = () => {
         <div className=" md:container h-full mx-auto md:flex ">
 
           {/* Text Content on the Left */}
-          <div className="w-full md:w-1/2 md:ml-9 flex flex-col md:items-start items-center justify-center text-white relative  md:top-0 sm:top-[480px] top-[320px]">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-Yeseva px-6 text-center md:text-left text-black">A WORLD WHERE YOU GET PAID TO <span className="text-[#403bbf]">SHOOT </span></h1>
-            <p className="mt-4 text-black text-center px-6 md:text-left font-Montserrat font-thin">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+          <div className="w-full md:w-1/2 md:ml-9 flex flex-col md:items-start items-center justify-center text-white px-6   lg:px-16 relative  md:top-0 sm:top-[480px] top-[320px]">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-Yeseva  text-center md:text-left text-black">A WORLD WHERE YOU GET PAID TO <span className="text-[#403bbf]">SHOOT </span></h1>
+            <p className="mt-4 text-black text-center md:text-left font-Montserrat font-thin">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
             <button className="mt-6 px-8 pt-2.5 pb-3 bg-[#403bbf] hover:bg-blue-600 text-white text-sm font-Montserrat font-semibold rounded-full">Create Campaign</button>
           </div>
 
           {/* Image on the Right */}
-          <div className=" mt-40  md:w-1/2 relative md:bottom-0 md:ml-0 ml-3  sm:bottom-[260px] bottom-[355px]">
+          <div className=" mt-40  md:w-1/2 relative md:bottom-0 md:ml-0 ml-10  sm:bottom-[260px] bottom-[355px]">
             <img src={banners} alt="Your Image" className="relative xl:left-10 -top-10 left-6 md:left-14 w-10/12 md:w-10/12 xl:w-[425px] object-cover" />
 
 
@@ -68,7 +68,7 @@ const Banner = () => {
               <div className="text-black text-[8px] sm:text-[16px] ">Malini Dode</div>
             </div>
 
-            <div className="font-Poppins relative sm:left-[210px] left-[160px] sm:bottom-[280px] bottom-[250px] md:left-[220px] lg:left-[315px] xl:left-[360px] md:bottom-[320px] lg:bottom-[300px] xl:bottom-[300px] w-[100px] flex sm:w-40 items-center bg-opacity-50 backdrop-blur-lg bg-[rgba(1,1,1,0.1)] rounded-full p-2 sm:px-4 sm:py-4">
+            <div className="font-Poppins relative sm:left-[190px] left-[160px] sm:bottom-[280px] bottom-[250px] md:left-[220px] lg:left-[315px] xl:left-[360px] md:bottom-[320px] lg:bottom-[300px] xl:bottom-[300px] w-[100px] flex sm:w-40 items-center bg-opacity-50 backdrop-blur-lg bg-[rgba(1,1,1,0.1)] rounded-full p-2 sm:px-4 sm:py-4">
               <img src={usertwo} alt="user" className="mr-3" />
               <div className="text-black text-[8px] sm:text-[16px] ">Sam Dcruz</div>
             </div>

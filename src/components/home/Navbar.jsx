@@ -22,7 +22,7 @@ const NavBar = () => {
         <div className="block lg:hidden">
           <button
             onClick={toggleMobileMenu}
-            className="text-white focus:outline-none"
+            className="text-[#403bbf] focus:outline-none"
           >
             &#9776;
           </button>
@@ -60,7 +60,7 @@ const NavBar = () => {
       </div>
 
       {isMobileMenuOpen && (
-        <div className="lg:hidden mt-2 space-y-2">
+        <div className="lg:hidden bg-[#403bbf] rounded-xl font-Poppins px-6 py-4 mt-2 space-y-2">
           <Link to="/" className={`text-white block  ${location.pathname === '/' ? 'hover:text-gray-500' : ''}`}>
             Home
           </Link>
@@ -70,7 +70,9 @@ const NavBar = () => {
           <Link to="/contact" className={`text-white block  ${location.pathname === '/contact' ? 'hover:text-gray-500' : ''}`}>
             Contact Us
           </Link>
-          <Link to="/signin" className=" hover:text-gray-500">Login</Link>
+          <span className="flex justify-end">
+          <Link to="/signin" className="text-white text-sm font-[650] font-Poppins px-9 pt-2.5 pb-3 bg-[rgba(1,1,1,0.1)] rounded-full ">Login</Link>
+          </span>
         </div>
       )}
     </nav>

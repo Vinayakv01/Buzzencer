@@ -34,15 +34,15 @@ const CustomerTestimonials = () => {
     autoplay: true,
     autoplaySpeed: 2000,
     arrows: false,
-    beforeChange: (current, next) => setCurrentSlide(next), // Update currentSlide on change
+    beforeChange: (current, next) => setCurrentSlide(next),
     customPaging: i => (
       <div
         style={{
           width: i === currentSlide ? "20px" : "10px",
           height: "13px",
           borderRadius: "45%",
-          backgroundColor: i === currentSlide ? "#FCB225" : "#FFFFFF", // Change the colors as needed
-          transition: "background-color 0.3s, width 0.3s", // Smooth transition
+          backgroundColor: i === currentSlide ? "#FCB225" : "#FFFFFF",
+          transition: "background-color 0.3s, width 0.3s",
 
         }}
       ></div>
@@ -55,14 +55,14 @@ const CustomerTestimonials = () => {
   };
 
   return (
-    <section className="bg-gray-100 py-12">
+    <section className="bg-gray-100 py-10">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
           <div>
             {/* Image */}
             <img src={heart} alt="Customer" className="w-full h-auto md:w-[500px] px-10 md:px-0 mb-8 md:mb-0 mx-auto " />
           </div>
-          <div className=" font-Montserrat mx-auto w-3/4">
+          <div className=" font-Montserrat mx-auto  w-3/4">
             {/* Testimonies Carousel */}
             <h3 className="text-3xl flex justify-between font-semibold text-gray-800 mb-2">What Our Customers Say 
             <span>
