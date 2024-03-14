@@ -35,7 +35,7 @@ const Banner = () => {
           </div>
 
           {/* Image on the Right */}
-          <div className=" mt-40  md:w-1/2 relative md:bottom-0 md:ml-0 ml-10  sm:bottom-[260px] bottom-[355px]">
+          <div className=" mt-40  md:w-1/2 relative md:bottom-0 md:ml-0 ml-8  sm:bottom-[260px] bottom-[355px]">
             <img src={banners} alt="Your Image" className="relative xl:left-10 -top-10 left-6 md:left-14 w-10/12 md:w-10/12 xl:w-[425px] object-cover" />
 
 
