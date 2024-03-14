@@ -14,6 +14,9 @@ export default {
   
   
       },
+      screens: {
+        'sm': '350px',
+      },
 
     },
   },
