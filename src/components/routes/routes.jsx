@@ -1,3 +1,4 @@
+// main route
 import React from 'react';
 import Home from '../home/home';
 import About from '../home/about';
@@ -5,6 +6,7 @@ import Contact from '../home/contact';
 import Login from '../login/login';
 import Signup from '../login/signup';
 import Layout from '../layout/layouts';
+import InfluencerLayout from './influencerroute'; // Import InfluencerLayout
 import { Routes, Route } from 'react-router-dom';
 
 const Routing = () => {
@@ -16,6 +18,7 @@ const Routing = () => {
         <Route path="signin" element={<Login />} />
         <Route path="contact" element={<Contact />} />
         <Route path="about" element={<About />} />
+        <Route path="idashboard/*" element={<InfluencerLayout />} /> {/* Nested route for InfluencerLayout */}
       </Route>
     </Routes>
   );
