@@ -1,12 +1,12 @@
 import React from 'react';
-import Sidenav from '../influencer/sidenav';
+import Sidebar from '../influencer/sidebar';
 import { Outlet } from 'react-router-dom';
 
 const InfluencerLayout = () => {
   return (
     <div className="flex h-screen">
       {/* Side Navigation */}
-      <Sidenav />
+      <Sidebar />
 
       {/* Main Content Area */}
       <div className="flex flex-col flex-1 overflow-hidden">

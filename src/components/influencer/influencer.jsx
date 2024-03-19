@@ -12,7 +12,6 @@ import wishlist from './wishlist';
 const Influencer = () => {
   return (
     <div className="flex">
-      <Sidenav />
       <div className="flex-grow">
         <dashboard />
         <campaign />
