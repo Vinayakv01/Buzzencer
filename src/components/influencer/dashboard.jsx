@@ -54,14 +54,14 @@ const Dashboard = () => {
 
   return (
 
-    <div className="h-screen bg-[#F7F6FC]">
+    <div className="h-screen font-Montserrat bg-[#F7F6FC]">
       <div className="grid lg:grid-cols-3 gap-5 p-4 bg-[#F7F6FC]">
         {containersData.map((container, index) => (
           <div key={container.id} className={`p-4 h-[124px] rounded-2xl border-2 ${colors[index % colors.length]}`}>
-            <p className=" mt-2">{container.name}</p>
+            <p className=" mt-2 font-semibold">{container.name}</p>
 
             <div className="flex mt-2 justify-between items-center">
-              <div>{container.progess}</div>
+              <div className="text-2xl font-semibold">{container.progess}</div>
               <div className="flex justify-end">
                 <img src={container.logo} alt={container.name} className="w-12" />
               </div>
@@ -73,21 +73,21 @@ const Dashboard = () => {
 
       <div>
          {campaignData.map((data) => (
-        <div key={data.id} className="p-4 mx-4 mt-4 bg-gray-200 rounded-md shadow-md">
-          <h2 className="text-xl font-semibold">{data.campaign}</h2>
-          <p className="text-gray-600 mb-2">Campaign Earning: {data.earning}</p>
-          <div className="mb-4">
-            <h3 className="font-semibold">Campaign Description:</h3>
-            <p className="text-gray-600">{data.details.description}</p>
+        <div key={data.id} className="p-4 mx-4 mt-4 bg-white rounded-2xl shadow-md font-Montserrat">
+          <h2 className=" font-semibold ">{data.campaign}</h2>
+          <p className="text-black mt-3 text-sm font-semibold mb-2"><span className="font-normal">Campaign Earning:</span> {data.earning}</p>
+          <div className="mb-4 text-sm">
+            <h3 className="">Campaign Description:</h3>
+            <p className="text-gray-600 mt-2">{data.details.description}</p>
           </div>
           <div className="mb-4 flex flex-row">
   <div className="mr-4 flex flex-row ">
-    <h3 className="font-semibold ">Platforms:</h3>
-    <ul className="list-inside flex flex-row">
+    <h3 className="text-sm">Platforms:</h3>
+    <ul className="list-inside space-x-2 flex flex-row">
   {data.details.platforms ? (
     data.details.platforms.map((platform, index) => (
-      <li key={index} className="mr-2">
-        <img src={platformLogos[platform]} alt={platform} className="w-8 h-8" />
+      <li key={index} className="mr-2 ml-2">
+        <img src={platformLogos[platform]} alt={platform} className="w-5" />
       </li>
     ))
   ) : (
@@ -97,10 +97,10 @@ const Dashboard = () => {
 
   </div>
   <div className="flex flex-row space-x-3">
-    <p className="font-semibold border">Start Date: {data.details.start_date}</p>
-    <hr className="border-r-2 border-black h-full ml-4" />
+    <p className="md:ml-3 text-sm ">Start Date: {data.details.start_date}</p>
+    <hr className="border-r border-black h-full ml-4" />
 
-    <p className="font-semibold">End Date: {data.details.end_date}</p>
+    <p className="text-sm">End Date: {data.details.end_date}</p>
   </div>
 </div>
 

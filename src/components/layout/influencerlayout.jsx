@@ -11,7 +11,7 @@ const InfluencerLayout = () => {
       {/* Main Content Area */}
       <div className="flex flex-col flex-1 overflow-hidden">
         {/* Header */}
-        <header className="w-full h-16 bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+        <header className="w-full h-16 bg-white border-b border-gray-200">
           {/* Header content */}
         </header>
 
