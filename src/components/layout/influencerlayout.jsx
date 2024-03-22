@@ -16,7 +16,7 @@ const InfluencerLayout = () => {
         </header>
 
         {/* Main Content */}
-        <main className="flex flex-col flex-1 overflow-y-auto bg-gray-100 dark:bg-gray-900">
+        <main className="flex flex-col flex-1 overflow-y-auto bg-gray-100 ">
           {/* Outlet for rendering nested routes */}
           <Outlet />
         </main>
