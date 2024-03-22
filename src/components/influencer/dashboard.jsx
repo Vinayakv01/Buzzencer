@@ -4,7 +4,9 @@ import arrows from "../../assets/idashboardlogo/arrows.png";
 import stars from "../../assets/idashboardlogo/stars.png";
 import line from "../../assets/idashboardlogo/lines.png";
 import rupee from "../../assets/idashboardlogo/rupee.png";
-
+import linkedin from "../../assets/logo/linkedin.svg";
+import twitter from "../../assets/logo/twitter.svg";
+import facebook from "../../assets/logo/facebook.svg";
 const Dashboard = () => {
   // Array of JSON data with logos for containers
   const containersData = [
@@ -14,6 +16,13 @@ const Dashboard = () => {
     { id: 4, logo: line, name: 'Buzzencer Level', progess: '12' },
     { id: 5, logo: stars, name: 'Buzzencer Score', progess: '100+' }
   ];
+
+  const platformLogos = {
+    "Facebook": facebook,
+    "Instagram": twitter,
+    "Twitter": linkedin
+  };
+  
 
   const campaignData = [
     {
@@ -33,7 +42,7 @@ const Dashboard = () => {
       "earning": "Rs. 300000/-",
       "details": {
         "description": "Another dummy text",
-        "platforms": ["Facebook", "Instagram"],
+        "platforms": ["Facebook", "Instagram", "Twitter"],
         "start_date": "1st January 2022",
         "end_date": "31st December 2022"
       }
@@ -72,17 +81,25 @@ const Dashboard = () => {
             <p className="text-gray-600">{data.details.description}</p>
           </div>
           <div className="mb-4 flex flex-row">
-    <h3 className="font-semibold ">Platforms:</h3>
   <div className="mr-4 flex flex-row ">
     <h3 className="font-semibold ">Platforms:</h3>
-    <ul className="list-disc list-inside flex flex-row ">
-      {data.details.platforms.map((platform, index) => (
-        <li key={index}>{platform}</li>
-      ))}
-    </ul>
+    <ul className="list-inside flex flex-row">
+  {data.details.platforms ? (
+    data.details.platforms.map((platform, index) => (
+      <li key={index} className="mr-2">
+        <img src={platformLogos[platform]} alt={platform} className="w-8 h-8" />
+      </li>
+    ))
+  ) : (
+    <li>No platforms available</li>
+  )}
+</ul>
+
   </div>
-  <div className="flex flex-row">
-    <p className="font-semibold">Start Date: {data.details.start_date}</p>
+  <div className="flex flex-row space-x-3">
+    <p className="font-semibold border">Start Date: {data.details.start_date}</p>
+    <hr className="border-r-2 border-black h-full ml-4" />
+
     <p className="font-semibold">End Date: {data.details.end_date}</p>
   </div>
 </div>
