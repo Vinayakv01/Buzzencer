@@ -12,9 +12,9 @@ const Wallet = () => {
   const colors = ['bg-gradient-to-r from-[#F5F5FC] to-[#E0E1EE]'];
 
   return (
-    <div className="bg-white shadow-xl p-4 m-4">
+    <div className="bg-white shadow-2xl rounded-xl p-4 m-4">
       <div className="font-Montserrat ">
-        <div className="grid lg:grid-cols-3 gap-5 p-4 ">
+        <div className="grid lg:grid-cols-3 gap-5  ">
           {containersData.map((container, index) => (
             <div key={container.id} className={`p-4 h-[124px] rounded-3xl border-white border-2 ${colors[index % colors.length]}`}>
               <p className=" mt-2 font-semibold">{container.name}</p>
@@ -97,7 +97,7 @@ const Wallet = () => {
               Submit
             </button>
           </span>
-          <p className="text-sm">For any query contact us on +919833456737 or <span className="text-[#403bbf]">Info@buzzencers.com</span></p>
+          <p className="text-sm font-semibold">For any query contact us on +919833456737 or <span className="text-[#403bbf]">Info@buzzencers.com</span></p>
         </div>
       </div>
 

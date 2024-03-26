@@ -6,6 +6,7 @@ const Login = () => {
   return (
     <div className="md:flex h-screen">
       {/* Left side (Image) */}
+
       <div className="w-1/2 bg-blue-200 flex items-center justify-center">
         <img src={loginImg} alt="Login" className="w-9/12" />
       </div>

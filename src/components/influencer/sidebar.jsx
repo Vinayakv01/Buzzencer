@@ -57,7 +57,7 @@ export function SidebarItem({ icon, text, active, alert, path }) {
   const { expanded } = useContext(SidebarContext);
   return (
     <li className={`relative font-Montserrat flex items-center py-2 px-3 my-3 font-medium rounded-md cursor-pointer transition-colors group ${active ? " text-[#A8A79A] hover:text-white" : "hover:bg-[#403bbf] text-[#A8A79A] hover:text-white"}`}>
-      {icon}
+      <Link to={path} >{icon}</Link> {/* Use Link instead of span */}
       <Link to={path} className={`overflow-hidden transition-all ${expanded ? "w-52 ml-3" : "w-0"}`}>{text}</Link> {/* Use Link instead of span */}
       {alert && (
         <div className={`absolute right-2 w-2 h-2 rounded bg-indigo-400 ${expanded ? "" : "top-2"}`}>
