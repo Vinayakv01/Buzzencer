@@ -1,7 +1,8 @@
+// main route
 import React from 'react';
 import Home from '../home/home';
-import About from '../about/about';
-import Contact from '../contact/contact';
+import About from '../home/about';
+import Contact from '../home/contact';
 import Login from '../login/login';
 import Signup from '../login/signup';
 import Layout from '../layout/layouts';

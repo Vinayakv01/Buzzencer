@@ -4,7 +4,7 @@ const ContactForm = () => {
   return (
     <div className="container pl-10 md:px-0 md:mx-auto md:max-w-2/4">
       <h2 className="text-4xl  font-Yeseva text-center mb-6 mt-20 font-yeseva">Get In Touch With Us</h2>
-      <form className="">
+      <form className="mx-auto max-w-4xl">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 font-Montserrat">
           <div className="mb-4">
             <label htmlFor="name" className="block text-gray-600  font-semibold mb-2">
