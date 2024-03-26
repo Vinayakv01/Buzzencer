@@ -1,5 +1,5 @@
 import React from 'react';
-import Sidebar from './sidebar';
+import Sidenav from './sidenav';
 import dashboard from './dashboard';
 import campaign from './campaign'; 
 import profile from './profile';
@@ -12,7 +12,6 @@ import wishlist from './wishlist';
 const Influencer = () => {
   return (
     <div className="flex">
-      <Sidebar />
       <div className="flex-grow">
         <dashboard />
         <campaign />

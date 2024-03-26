@@ -1,80 +1,75 @@
-import React from 'react';
-import { TfiDashboard } from "react-icons/tfi";
+import { ChevronFirst, ChevronLast, MoreVertical } from "lucide-react";
+import logo from "../../assets/hmain.png";
+import profile from "../../assets/hlogo.png";
+import { createContext, useContext, useState } from "react";
+import { Link } from "react-router-dom"; // Import Link from React Router DOM
+import { LayoutDashboard, Heart} from "lucide-react";
 import { FaRegUser } from "react-icons/fa";
-import { MdCampaign } from "react-icons/md";
-import { IoIosHeartEmpty } from "react-icons/io";
-import { CiWallet } from "react-icons/ci";
+import { RiMegaphoneLine } from "react-icons/ri";
+import { RiWallet3Line } from "react-icons/ri";
 
+const SidebarContext = createContext();
 
-const Sidebar = () => {
+const sidebarItems = [
+  { icon: <LayoutDashboard size={24} />, text: "Dashboard", path: "/dashboard" },
+  { icon: <FaRegUser size={24} />, text: "Profile",  path: "/profile" },
+  { icon: <RiMegaphoneLine size={24} />, text: "Campaign", path: "/campaign" },
+  { icon: <Heart size={24} />, text: "Wishlist", path: "/wishlist" },
+  { icon: <RiWallet3Line size={24} />, text: "Wallet", path: "/wallet" },
+
+];
+
+export default function Sidebar() {
+  const [expanded, setExpanded] = useState(true)
   return (
-    <div className="flex flex-col h-full w-64 bg-gray-800 text-white">
-      <div className="p-4">
-        <h2>
-        <img src="public\images\buzzencer_logo.svg"/>
-        </h2>
-              </div>
-      <ul className="flex flex-col space-y-2">
-        <li className="p-4 hover:bg-blue-700">
-        <TfiDashboard /><a href="#" className="block">Dashboard</a>
-        </li>
-        <li className="p-4 hover:bg-blue-700">
-         <FaRegUser/> <a href="#" className="block">Profile</a>
-        </li>
-        <li className="p-4 hover:bg-blue-700">
-          <MdCampaign/><a href="#" className="block">Campaign</a>
-        </li>
-        <li className="p-4 hover:bg-blue-700">
-          <IoIosHeartEmpty/><a href="#" className="block">Wishlist</a>
-        </li>
-        <li className="p-4 hover:bg-blue-700">
-         <CiWallet/> <a href="#" className="block">Wallet</a>
-        </li>
-      </ul>
-    </div>
-  );
-};
+    <>
+      <aside className="h-screen">
+        <nav className="h-full flex flex-col bg-[#272323] border-r shadow-sm">
+          <div className="p-4 pb-4 flex justify-between items-center border-b border-gray-400">
+          <Link to="/">
+            <img src={logo} className={`overflow-hidden transition-all ${expanded ? "w-32" : "w-0"}`} />
+            </Link>
+            <button onClick={() => setExpanded((curr) => !curr)} className="p-1.5 rounded-lg bg-[#272323] hover:bg-gray-800 text-white">
+              {expanded ? <ChevronFirst /> : <ChevronLast />}
+            </button>
+          </div>
 
-export default Sidebar;
+          <SidebarContext.Provider value={{ expanded }}>
+            <ul className="flex-1 px-3">
+              {sidebarItems.map((item, index) => (
+                <SidebarItem key={index} icon={item.icon} text={item.text} alert={item.alert} active={item.active} path={item.path} />
+              ))}
+            </ul> 
+          </SidebarContext.Provider>
 
-// import React from 'react';
-// import { TfiDashboard } from "react-icons/tfi";
-// import { FaRegUser } from "react-icons/fa";
-// import { MdCampaign } from "react-icons/md";
-// import { IoIosHeartEmpty } from "react-icons/io";
-// import { CiWallet } from "react-icons/ci";
+          <div className={` flex p-3 ${expanded ? "invisible" : "visible"}`}>
+            <Link to="/">
+            <img src={profile} className="w-10 h-10 rounded-md " />
+          </Link>
+          </div>
+        </nav>
+      </aside>
+    </>
+  )
+}
 
-// const Sidebar = () => {
-//   return (
-//     <div className="flex flex-col h-full w-64 bg-gray-800 text-white">
-//       <div className="p-4 flex items-center">
-//         <img src="public/images/buzzencer_logo.svg" alt="Logo" className="filter invert(100%)" />
-//       </div>
-//       <ul className="flex flex-col space-y-2">
-//         <li className="p-4 hover:bg-blue-700 flex items-center">
-//           <TfiDashboard className="w-6 h-6 mr-2" />
-//           <a href="#" className="block">Dashboard</a>
-//         </li>
-//         <li className="p-4 hover:bg-blue-700 flex items-center">
-//           <FaRegUser className="w-6 h-6 mr-2" />
-//           <a href="#" className="block">Profile</a>
-//         </li>
-//         <li className="p-4 hover:bg-blue-700 flex items-center">
-//           <MdCampaign className="w-6 h-6 mr-2" />
-//           <a href="#" className="block">Campaign</a>
-//         </li>
-//         <li className="p-4 hover:bg-blue-700 flex items-center">
-//           <IoIosHeartEmpty className="w-6 h-6 mr-2" />
-//           <a href="#" className="block">Wishlist</a>
-//         </li>
-//         <li className="p-4 hover:bg-blue-700 flex items-center">
-//           <CiWallet className="w-6 h-6 mr-2" />
-//           <a href="#" className="block">Wallet</a>
-//         </li>
-//       </ul>
-//     </div>
-//   );
-// };
+export function SidebarItem({ icon, text, active, alert, path }) {
+  const { expanded } = useContext(SidebarContext);
+  return (
+    <li className={`relative font-Montserrat flex items-center py-2 px-3 my-3 font-medium rounded-md cursor-pointer transition-colors group ${active ? " text-[#A8A79A] hover:text-white" : "hover:bg-[#403bbf] text-[#A8A79A] hover:text-white"}`}>
+      {icon}
+      <Link to={path} className={`overflow-hidden transition-all ${expanded ? "w-52 ml-3" : "w-0"}`}>{text}</Link> {/* Use Link instead of span */}
+      {alert && (
+        <div className={`absolute right-2 w-2 h-2 rounded bg-indigo-400 ${expanded ? "" : "top-2"}`}>
 
-// export default Sidebar;
+        </div>
+      )}
 
+      {!expanded && (
+        <div className={`absolute left-full rounded-md px-2 py-1 ml-6 bg-indigo-100 text-indigo-800 text-sm invisible opacity-20 -translate-x-3 transition-all group-hover:visible group-hover:opacity-100 group-hover:translate-x-0`}>
+          {text}
+        </div>
+      )}
+    </li>
+  )
+}

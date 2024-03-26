@@ -25,7 +25,7 @@ const Banner = () => {
             <button className="mt-6 px-8 pt-2.5 pb-3 bg-[#403bbf] hover:bg-blue-600 text-white text-sm font-Montserrat font-semibold rounded-full">Create Campaign</button>
           </div>
           {/* Image on the Right */}
-          <div className=" mt-60  md:w-1/2 relative md:bottom-0 md:ml-0 ml-10  sm:bottom-[260px] bottom-[355px]">
+          <div className=" mt-40  md:w-1/2 relative md:bottom-0 md:ml-0 sm:ml-8 ml-4  sm:bottom-[260px] bottom-[355px]">
             <img src={banners} alt="Your Image" className="relative xl:left-10 -top-10 left-6 md:left-14 w-10/12 md:w-10/12 xl:w-[425px] object-cover" />
 
 
@@ -33,20 +33,20 @@ const Banner = () => {
               <img src={instagram} alt="instagram" className="sm:w-[30px] w-[20px]" />
             </div>
 
-            <div className="twitter-logo bg-white rounded-full p-3 sm:p-4 shadow-xl relative bottom-[240px] sm:bottom-[320px] right-9 sm:right-12 md:right-20 lg:right-32 md:bottom-[300px] lg:bottom-[420px] xl:bottom-[430px]  ">
-              <img src={twitter} alt="twitter" className="sm:w-[40px] w-[25px]" />
+            <div className="twitter-logo bg-white rounded-full p-3 sm:p-3 shadow-xl relative bottom-[240px] sm:bottom-[320px] right-9 sm:right-12 md:right-20 lg:right-32 md:bottom-[300px] lg:bottom-[420px] xl:bottom-[430px]  ">
+              <img src={twitter} alt="twitter" className="sm:w-[35px] w-[25px]" />
             </div>
 
             <div className="youtube-logo bg-white rounded-full p-3 shadow-xl relative right-[30px] md:right-[60px] bottom-[300px] sm:bottom-[400px] md:bottom-[380px] lg:bottom-[440px] xl:bottom-[460px] ">
               <img src={youtube} alt="youtube" className="w-[25px]" />
             </div>
 
-            <div className="linkedin-logo bg-white rounded-full p-3 sm:p-4 shadow-xl relative  lg:left-10 sm:left-10 left-6 bottom-[305px] sm:bottom-[400px] md:bottom-[400px] lg:bottom-[510px] xl:bottom-[530px] ">
+            <div className="linkedin-logo bg-white rounded-full p-3 sm:p-4 shadow-xl relative  lg:left-10 sm:left-14 left-6 bottom-[305px] sm:bottom-[400px] md:bottom-[400px] lg:bottom-[510px] xl:bottom-[530px] ">
               <img src={linkedin} alt="linkedin" className="w-[25px]" />
             </div>
 
-            <div className="facebook-logo bg-white rounded-full p-3 sm:p-4 shadow-xl relative left-8 sm:left-10 lg:left-[170px] xl:left-[190px] sm:bottom-[320px] bottom-[240px] md:bottom-[340px] lg:bottom-[380px]">
-              <img src={facebook} alt="facebook" className="sm:w-[40px] w-[25px]" />
+            <div className="facebook-logo bg-white rounded-full p-3 sm:p-4 shadow-xl relative left-8 sm:left-16 lg:left-[170px] xl:left-[190px] sm:bottom-[320px] bottom-[240px] md:bottom-[340px] lg:bottom-[380px]">
+              <img src={facebook} alt="facebook" className="sm:w-[35px] w-[25px]" />
             </div>
 
             <div className="snapchat-logo bg-white rounded-full p-3 sm:p-3 shadow-xl relative left-56 sm:left-0 md:left-[330px] lg:left-[120px] xl:left-[180px] bottom-[220px] sm:bottom-[240px] md:bottom-[270px]">

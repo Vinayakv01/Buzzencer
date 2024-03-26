@@ -1,11 +1,11 @@
 import React from 'react'
 
-const campaign = () => {
+const Campaign = () => {
   return (
     <div>
-      
+      hi
     </div>
   )
 }
 
-export default campaign
+export default Campaign
