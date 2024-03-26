@@ -4,14 +4,15 @@ import { Link } from 'react-router-dom';
 
 const Login = () => {
   return (
-    <div className="flex h-screen">
+    <div className="md:flex h-screen">
       {/* Left side (Image) */}
+
       <div className="w-1/2 bg-blue-200 flex items-center justify-center">
         <img src={loginImg} alt="Login" className="w-9/12" />
       </div>
 
       {/* Right side (Form) */}
-      <div className="w-1/2 flex items-center justify-center">
+      <div className="md:w-1/2 w-full flex items-center justify-center">
         <form className="w-3/4  p-8 ">
           <h2 className="text-3xl text-center font-semibold font-Poppins mb-1">Welcome</h2>
           <p className="text-center font-Poppins mb-6">Sign-In to your Buzzencer Account.</p>
@@ -40,7 +41,7 @@ const Login = () => {
             />
           </div>
         
-         <p className="flex flex-row justify-end  font-Poppins text-[#403bbf]">
+         <p className="flex flex-row justify-end font-Poppins text-[#403bbf]">
           Forget Password?
          </p>
         <span className="flex flex-row justify-center ">

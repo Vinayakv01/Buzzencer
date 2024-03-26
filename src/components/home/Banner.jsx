@@ -13,27 +13,17 @@ import usertwo from "../../assets/usertwo.png";
 import './banner.css';
 
 const Banner = () => {
-
-
-
-
-
-
   return (
     <div>
       {/* section-1  */}
-
       <div className="bg-cover bg-center" style={{ backgroundImage: `url(${bghome})` }}>
-
         <div className=" md:container h-full mx-auto md:flex ">
-
           {/* Text Content on the Left */}
-          <div className="w-full md:w-1/2 md:ml-9 flex flex-col md:items-start items-center justify-center text-white px-6   lg:px-16 relative  md:top-0 sm:top-[480px] top-[320px]">
+          <div className="w-full md:w-1/2 md:ml-9 flex flex-col md:items-start items-center justify-center text-white px-6   lg:px-16 relative  md:top-0 sm:top-[480px] top-[360px]">
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-Yeseva  text-center md:text-left text-black">A WORLD WHERE YOU GET PAID TO <span className="text-[#403bbf]">SHOOT </span></h1>
             <p className="mt-4 text-black text-center md:text-left font-Montserrat font-thin">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
             <button className="mt-6 px-8 pt-2.5 pb-3 bg-[#403bbf] hover:bg-blue-600 text-white text-sm font-Montserrat font-semibold rounded-full">Create Campaign</button>
           </div>
-
           {/* Image on the Right */}
           <div className=" mt-40  md:w-1/2 relative md:bottom-0 md:ml-0 sm:ml-8 ml-4  sm:bottom-[260px] bottom-[355px]">
             <img src={banners} alt="Your Image" className="relative xl:left-10 -top-10 left-6 md:left-14 w-10/12 md:w-10/12 xl:w-[425px] object-cover" />
@@ -72,17 +62,11 @@ const Banner = () => {
               <img src={usertwo} alt="user" className="mr-3" />
               <div className="text-black text-[8px] sm:text-[16px] ">Sam Dcruz</div>
             </div>
-
-
           </div>
-
         </div>
-
-
         {/* section-2 */}
-
-        <div>
-          <section className="container mx-auto  md:px-4 lg:px-0">
+        <div className="mt-8">
+          <section className="container md:px-4 lg:px-0">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <div className="transform translate-y-[-150px] translate-x-[12px] md:translate-x-[40px]">
                 <img src={about} alt="SVG Image" className="lg:w-[420px] h-[400px] lg:h-[500px] " />
