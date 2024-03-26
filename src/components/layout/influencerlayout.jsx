@@ -1,7 +1,7 @@
 import React from 'react';
 import Sidebar from '../influencer/sidebar';
 import { Outlet } from 'react-router-dom';
-
+import Header from '../influencer/header';
 const InfluencerLayout = () => {
   return (
     <div className="flex h-screen">
@@ -11,9 +11,9 @@ const InfluencerLayout = () => {
       {/* Main Content Area */}
       <div className="flex flex-col flex-1 overflow-hidden">
         {/* Header */}
-        <header className="w-full h-16 bg-white border-b border-gray-200">
-          {/* Header content */}
-        </header>
+        <div className="w-full h-16 bg-white border-b border-gray-200 ">
+<Header />
+       </div>
 
         {/* Main Content */}
         <main className="flex flex-col flex-1 overflow-y-auto bg-gray-100 ">

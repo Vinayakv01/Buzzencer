@@ -29,7 +29,7 @@ export default function Sidebar() {
           <Link to="/">
             <img src={logo} className={`overflow-hidden transition-all ${expanded ? "w-32" : "w-0"}`} />
             </Link>
-            <button onClick={() => setExpanded((curr) => !curr)} className="p-1.5 rounded-lg bg-gray-900 hover:bg-gray-800 text-white">
+            <button onClick={() => setExpanded((curr) => !curr)} className="p-1.5 rounded-lg bg-[#272323] hover:bg-gray-800 text-white">
               {expanded ? <ChevronFirst /> : <ChevronLast />}
             </button>
           </div>
