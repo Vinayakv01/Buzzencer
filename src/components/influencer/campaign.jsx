@@ -5,9 +5,7 @@ const Campaign = () => {
   return (
     <>
       <SliderOptions />
-      <div>
-        hi
-      </div>
+      
     </>
   )
 }
