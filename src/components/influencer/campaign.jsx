@@ -1,10 +1,14 @@
 import React from 'react'
+import SliderOptions from './SliderOptions'
 
 const Campaign = () => {
   return (
-    <div>
-      hi
-    </div>
+    <>
+      <SliderOptions />
+      <div>
+        hi
+      </div>
+    </>
   )
 }
 
