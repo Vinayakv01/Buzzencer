@@ -7,6 +7,7 @@ import { Check, X, ArrowLeft } from 'lucide-react';
 import Select from 'react-select';
 import CustomDatePicker from './CustomDatePicker';
 import Modal from './Modal'; // Assuming you have a Modal component
+import profile from '../../assets/profile.png';
 
 
 const MultiStepForm = () => {
@@ -182,7 +183,7 @@ const MultiStepForm = () => {
   };
 
   return (
-    <div className="">
+    <div className="font-Montserrat">
       <div className="mb-4 relative">
         <div className="text-center max-w-md mx-auto mt-2 flex items-center justify-between ">
           {[...Array(totalSteps)].map((_, index) => (
@@ -201,6 +202,13 @@ const MultiStepForm = () => {
       </div>
       {step === 1 && (
         <form onSubmit={nextStep} className="mt-5 bg-white p-4 m-4 rounded-xl shadow-md">
+          <div className="flex flex-col justify-center items-center mt-2 mb-6 ">
+            <div className="flex justify-center items-center border p-4 rounded-lg">
+              <img src={profile} alt="Profile" className="w-8 h-8 rounded-full cursor-pointer mr-4" />
+              Add Profile Picture
+            </div>
+            <span className="text-[#403bbf] mt-2">Reset Password</span>
+          </div>
           <div className="mb-4 flex space-x-4">
             <div className="w-1/3">
               <label htmlFor="firstName" className="block font-medium">First Name</label>
@@ -310,10 +318,10 @@ const MultiStepForm = () => {
           </div>
           <div className="mb-4">
             <label htmlFor="address" className="block font-medium">Address</label>
-            <textarea name="address"  rows="6"  style={{ resize: 'none' }} id="address" value={formData.address} onChange={handleChange} className="mt-1 p-2 border rounded-md w-full" required></textarea>
+            <textarea name="address" rows="6" style={{ resize: 'none' }} id="address" value={formData.address} onChange={handleChange} className="mt-1 p-2 border rounded-md w-full" required></textarea>
           </div>
           <div className="flex items-center justify-center">
-          <button type="submit" className="text-sm font-[650] text-white font-Poppins px-9 pt-2.5 pb-2.5  bg-[#403bbf] rounded-full hover:bg-opacity-75 transition duration-300">Next</button>
+            <button type="submit" className="text-sm font-[650] text-white font-Poppins px-9 pt-2.5 pb-2.5  bg-[#403bbf] rounded-full hover:bg-opacity-75 transition duration-300">Next</button>
           </div>
         </form>
       )}
@@ -486,9 +494,9 @@ const MultiStepForm = () => {
         </div>
       )}
 
-{step === 3 && (
+      {step === 3 && (
         <form onSubmit={handlemSubmit} className="mt-8 bg-white m-4 p-4">
-   <div className="flex space-x-4">
+          <div className="flex space-x-4">
             <div className="mb-4 flex-grow">
               <label htmlFor="primaryCategory" className="block font-medium mb-2">Primary Category</label>
               <Select
