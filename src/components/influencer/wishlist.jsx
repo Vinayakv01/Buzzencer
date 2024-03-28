@@ -53,47 +53,48 @@ const handleClearSelection = () => {
 
 
   return (
-    <div className="p-4 bg-white m-4">
+    <div className="p-4 font-Montserrat bg-white m-4">
+      <div className="flex justify-between">
       {/* Search bar */}
       <input
         type="text"
-        placeholder="Search..."
-        className="px-4 py-2 border rounded-md mr-4"
+        placeholder=" Search your Brand"
+        className="px-4 py-2 border rounded-full w-5/12"
       />
 
       {/* Add New button */}
-      <button className="px-4 py-2 bg-blue-500 text-white rounded-md" onClick={() => setShowModal(true)}>Add New</button>
-
+      <button className="text-sm font-[650] shadow-lg text-white font-Poppins px-9 pt-2.5 pb-2.5  bg-[#403bbf] rounded-full hover:bg-opacity-75 transition duration-300" onClick={() => setShowModal(true)}>Add New</button>
+    </div>
       {/* Brands grid */}
       <div className="grid grid-cols-5 gap-4 mt-4">
         {brands.map((brand) => (
           <div
             key={brand.id}
-            className={`border p-2 rounded-md flex justify-between items-center cursor-pointer ${selectedBrands.includes(brand.id) ? 'bg-gray-200' : ''}`}
+            className={`border pt-1.5 pb-2 px-3 rounded-full flex justify-between items-center cursor-pointer ${selectedBrands.includes(brand.id) ? '' : ''}`}
             onClick={() => handleBrandSelection(brand.id)}
           >
-            <h3 className="text-lg font-semibold">{brand.name}</h3>
+            <h3 className=" font-semibold">{brand.name}</h3>
             <input
               type="checkbox"
               checked={selectedBrands.includes(brand.id)}
               onChange={() => {}}
-              className="mt-2"
+              className=""
             />
           </div>
         ))}
       </div>
 
       {/* Clear and Submit buttons */}
-      <div className="flex justify-end mt-4">
+      <div className="flex justify-center mt-4">
         <button
           onClick={handleClearSelection}
-          className="px-4 py-2 mr-4 bg-red-500 text-white rounded-md"
+          className="px-10 pt-2.5 pb-2.5 mr-4 bg-white hover:bg-opacity-75 hover:bg-gray-200 transition duration-300 border shadow-lg text-[#403bbf] rounded-full"
         >
           Clear
         </button>
         <button
           onClick={handleSubmit}
-          className="px-4 py-2 bg-blue-500 text-white rounded-md"
+          className="text-sm font-[650] shadow-lg text-white font-Poppins px-9 pt-2.5 pb-2.5  bg-[#403bbf] rounded-full hover:bg-opacity-75 transition duration-300"
         >
           Submit
         </button>

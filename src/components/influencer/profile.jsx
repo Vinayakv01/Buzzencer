@@ -4,6 +4,9 @@ import twitter from "../../assets/logo/twitter.svg";
 import instagram from "../../assets/logo/instagram.svg";
 import linkedin from "../../assets/logo/linkedin.svg";
 import { Check, X, ArrowLeft } from 'lucide-react';
+import Select from 'react-select';
+import CustomDatePicker from './CustomDatePicker';
+import Modal from './Modal'; // Assuming you have a Modal component
 
 
 const MultiStepForm = () => {
@@ -11,12 +14,16 @@ const MultiStepForm = () => {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
+    userName: '',
+    phoneno: '',
     email: '',
-    password: '',
-    address: '',
-    city: '',
+    dateOfBirth: null,
+    gender: '',
+    country: '',
     state: '',
-    zip: ''
+    city: '',
+    pincode: '',
+    address: ''
   });
 
   const handleChange = (e) => {
@@ -24,6 +31,41 @@ const MultiStepForm = () => {
     setFormData(prevData => ({
       ...prevData,
       [name]: value
+    }));
+  };
+
+  const handleDateChange = (date) => {
+    setFormData(prevData => ({
+      ...prevData,
+      dateOfBirth: date
+    }));
+  };
+
+  const handleGenderChange = (selectedOption) => {
+    setFormData(prevData => ({
+      ...prevData,
+      gender: selectedOption.value
+    }));
+  };
+
+  const handleCountryChange = (selectedOption) => {
+    setFormData(prevData => ({
+      ...prevData,
+      country: selectedOption.value
+    }));
+  };
+
+  const handleStateChange = (selectedOption) => {
+    setFormData(prevData => ({
+      ...prevData,
+      state: selectedOption.value
+    }));
+  };
+
+  const handleCityChange = (selectedOption) => {
+    setFormData(prevData => ({
+      ...prevData,
+      city: selectedOption.value
     }));
   };
 
@@ -81,6 +123,64 @@ const MultiStepForm = () => {
     { label: 'Business & Startup', value: 'business_startup' }
   ];
 
+
+
+  const [selectedPrimaryCategories, setSelectedPrimaryCategories] = useState([]);
+  const [selectedSecondaryCategories, setSelectedSecondaryCategories] = useState([]);
+
+  const handlePrimaryCategoryChange = (selectedOptions) => {
+    setSelectedPrimaryCategories(selectedOptions);
+  };
+
+  const handleSecondaryCategoryChange = (selectedOptions) => {
+    setSelectedSecondaryCategories(selectedOptions);
+  };
+
+  const customStyles = {
+    multiValue: (base, state) => ({
+      ...base,
+      backgroundColor: state.data.isFixed ? 'gray' : base.backgroundColor,
+    }),
+    control: (provided, state) => ({
+      ...provided,
+      borderRadius: '20px',
+      boxShadow: state.isFocused ? '0 0 0 1 px #403bbf' : 'none',
+    }),
+    option: (provided, state) => ({
+      ...provided,
+      borderBottom: '1px solid #e5e7eb',
+      padding: '10px 15px',
+      backgroundColor: state.isSelected ? '#2563EB' : 'white',
+      color: state.isSelected ? 'white' : 'black',
+    }),
+
+    multiValueLabel: (base, state) => ({
+      ...base,
+      fontWeight: state.data.isFixed ? 'bold' : base.fontWeight,
+      color: state.data.isFixed ? 'white' : base.color,
+      paddingRight: state.data.isFixed ? 6 : base.paddingRight,
+    }),
+    multiValueRemove: (base, state) => ({
+      ...base,
+      display: state.data.isFixed ? 'none' : base.display,
+    }),
+  };
+
+  const [showModal, setShowModal] = useState(false);
+
+  const handlemSubmit = (e) => {
+    e.preventDefault();
+    // Your form submission logic here
+
+    // Show the modal
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    // Close the modal
+    setShowModal(false);
+  };
+
   return (
     <div className="">
       <div className="mb-4 relative">
@@ -100,16 +200,121 @@ const MultiStepForm = () => {
 
       </div>
       {step === 1 && (
-        <form onSubmit={nextStep} className="mt-8">
-          <div className="mb-4">
-            <label htmlFor="firstName" className="block font-medium">First Name</label>
-            <input type="text" name="firstName" id="firstName" value={formData.firstName} onChange={handleChange} className="mt-1 p-2 border rounded-md w-full" required />
+        <form onSubmit={nextStep} className="mt-5 bg-white p-4 m-4 rounded-xl shadow-md">
+          <div className="mb-4 flex space-x-4">
+            <div className="w-1/3">
+              <label htmlFor="firstName" className="block font-medium">First Name</label>
+              <input type="text" name="firstName" id="firstName" value={formData.firstName} onChange={handleChange} className="mt-1 p-2 border rounded-full w-full" required />
+            </div>
+            <div className="w-1/3">
+              <label htmlFor="lastName" className="block font-medium">Last Name</label>
+              <input type="text" name="lastName" id="lastName" value={formData.lastName} onChange={handleChange} className="mt-1 p-2 border rounded-full w-full" required />
+            </div>
+            <div className="w-1/3">
+              <label htmlFor="userName" className="block font-medium">User Name</label>
+              <input type="text" name="userName" id="userName" value={formData.userName} onChange={handleChange} className="mt-1 p-2 border rounded-full w-full" required />
+            </div>
+          </div>
+          <div className="mb-4 flex space-x-4">
+            <div className="w-1/3">
+              <label htmlFor="dateOfBirth" className="block font-medium">Date of Birth</label>
+              <CustomDatePicker
+                selectedDate={formData.dateOfBirth}
+                handleChange={handleDateChange}
+                className="mt-1 border  w-full"
+
+              />
+            </div>
+            <div className="w-1/3">
+              <label htmlFor="gender" className="block font-medium">Gender</label>
+              <Select
+                id="gender"
+                value={{ value: formData.gender, label: formData.gender }}
+                onChange={handleGenderChange}
+                options={[
+                  { value: 'Male', label: 'Male' },
+                  { value: 'Female', label: 'Female' },
+                  { value: 'Other', label: 'Other' }
+                ]}
+                placeholder="Select Gender"
+                styles={customStyles}
+
+                isSearchable={false}
+                className="mt-1 border rounded-full w-full"
+                required
+              />
+            </div>
+            <div className="w-1/3">
+              <label htmlFor="country" className="block font-medium">Country</label>
+              <Select
+                id="country"
+                value={{ value: formData.country, label: formData.country }}
+                onChange={handleCountryChange}
+                options={[
+                  { value: 'Usa', label: 'USA' },
+                  { value: 'Uk', label: 'UK' },
+                  { value: 'INDIA', label: 'India' }
+                ]}
+                placeholder="Select Country"
+                isSearchable={false}
+                styles={customStyles}
+
+                className="mt-1  border rounded-full w-full"
+                required
+              />
+            </div>
+          </div>
+          <div className="mb-4 flex space-x-4">
+            <div className="w-1/3">
+              <label htmlFor="state" className="block font-medium">State</label>
+              <Select
+                id="state"
+                value={{ value: formData.state, label: formData.state }}
+                onChange={handleStateChange}
+                options={[
+                  { value: 'ca', label: 'California' },
+                  { value: 'ny', label: 'New York' },
+                  { value: 'tx', label: 'Texas' }
+                ]}
+                placeholder="Select State"
+                isSearchable={false}
+                styles={customStyles}
+
+                className="mt-1  border rounded-full w-full"
+                required
+              />
+            </div>
+            <div className="w-1/3">
+              <label htmlFor="city" className="block font-medium">City</label>
+              <Select
+                id="city"
+                value={{ value: formData.city, label: formData.city }}
+                onChange={handleCityChange}
+                options={[
+                  { value: 'la', label: 'Los Angeles' },
+                  { value: 'ny', label: 'New York City' },
+                  { value: 'sf', label: 'San Francisco' }
+                ]}
+                placeholder="Select City"
+                isSearchable={false}
+                styles={customStyles}
+
+                className="mt-1  border rounded-full w-full"
+                required
+              />
+            </div>
+            <div className="w-1/3">
+              <label htmlFor="pincode" className="block font-medium">Pincode</label>
+              <input type="text" name="pincode" id="pincode" value={formData.pincode} onChange={handleChange} className="mt-1 p-2 border rounded-full w-full" required />
+            </div>
           </div>
           <div className="mb-4">
-            <label htmlFor="lastName" className="block font-medium">Last Name</label>
-            <input type="text" name="lastName" id="lastName" value={formData.lastName} onChange={handleChange} className="mt-1 p-2 border rounded-md w-full" required />
+            <label htmlFor="address" className="block font-medium">Address</label>
+            <textarea name="address"  rows="6"  style={{ resize: 'none' }} id="address" value={formData.address} onChange={handleChange} className="mt-1 p-2 border rounded-md w-full" required></textarea>
           </div>
-          <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-md">Next</button>
+          <div className="flex items-center justify-center">
+          <button type="submit" className="text-sm font-[650] text-white font-Poppins px-9 pt-2.5 pb-2.5  bg-[#403bbf] rounded-full hover:bg-opacity-75 transition duration-300">Next</button>
+          </div>
         </form>
       )}
 
@@ -281,33 +486,65 @@ const MultiStepForm = () => {
         </div>
       )}
 
-      {step === 3 && (
-        <form onSubmit={handleSubmit} className="mt-8 bg-white m-4 p-4">
-          <div className="flex space-x-4">
+{step === 3 && (
+        <form onSubmit={handlemSubmit} className="mt-8 bg-white m-4 p-4">
+   <div className="flex space-x-4">
             <div className="mb-4 flex-grow">
               <label htmlFor="primaryCategory" className="block font-medium mb-2">Primary Category</label>
-              <select name="primaryCategory" id="primaryCategory" value={formData.primaryCategory} onChange={handleChange} className="mt-1 p-2 border rounded-full w-full" required>
-                <option value="">Select Category</option>
-                {categories.map(category => (
-                  <option key={category.value} value={category.value}>{category.label}</option>
-                ))}
-              </select>
+              <Select
+                id="primaryCategory"
+                value={selectedPrimaryCategories}
+                onChange={handlePrimaryCategoryChange}
+                options={categories}
+                placeholder="Select Category"
+                isSearchable={false}
+                isMulti
+                styles={customStyles}
+              />
             </div>
             <div className="mb-4 flex-grow">
               <label htmlFor="secondaryCategory" className="block font-medium mb-2">Secondary Category</label>
-              <select name="secondaryCategory" id="secondaryCategory" value={formData.secondaryCategory} onChange={handleChange} className="mt-1 p-2 border rounded-full w-full" required>
-                <option value="">Select Category</option>
-                {categories.map(category => (
-                  <option key={category.value} value={category.value}>{category.label}</option>
-                ))}
-              </select>
+              <Select
+                id="secondaryCategory"
+                value={selectedSecondaryCategories}
+                onChange={handleSecondaryCategoryChange}
+                options={categories}
+                placeholder="Select Category"
+                isSearchable={false}
+                isMulti
+                styles={customStyles}
+              />
             </div>
           </div>
-          <button type="button" onClick={prevStep} className="mr-4 bg-gray-300 text-gray-700 px-4 py-2 rounded-md">Back</button>
-          <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-md">Submit</button>
+          <div className="mt-6 flex items-center">
+            {/* Arrow on the left */}
+            <ArrowLeft className="text-[#403bbf] " onClick={prevStep} />
+
+            {/* Button centered vertically */}
+            <span className="flex-grow flex justify-center">
+              <button type="submit" className="text-sm font-[650] text-white font-Poppins px-9 pt-2.5 pb-2.5  bg-[#403bbf] rounded-full hover:bg-opacity-75 transition duration-300">Save</button>
+            </span>
+          </div>
         </form>
       )}
+
+      {/* Modal */}
+      {showModal && (
+        <Modal onClose={closeModal}>
+          <div className="flex items-center justify-center">
+            {/* Image */}
+            <img src="your-image-url.jpg" alt="Congratulations" className="w-1/2" />
+
+            {/* Text */}
+            <div className="w-1/2">
+              <h2 className="text-2xl font-bold mb-4">Congratulations!</h2>
+              <p className="text-lg">Your profile is complete.</p>
+            </div>
+          </div>
+        </Modal>
+      )}
     </div>
+
   );
 };
 
