@@ -207,7 +207,7 @@ const MultiStepForm = () => {
               <img src={profile} alt="Profile" className="w-8 h-8 rounded-full cursor-pointer mr-4" />
               Add Profile Picture
             </div>
-            <span className="text-[#403bbf] mt-2">Reset Password</span>
+            <span className="text-[#403bbf]  mt-2">Reset Password</span>
           </div>
           <div className="mb-4 flex space-x-4">
             <div className="w-1/3">
@@ -316,9 +316,9 @@ const MultiStepForm = () => {
               <input type="text" name="pincode" id="pincode" value={formData.pincode} onChange={handleChange} className="mt-1 p-2 border rounded-full w-full" required />
             </div>
           </div>
-          <div className="mb-4">
+          <div className="mb-2">
             <label htmlFor="address" className="block font-medium">Address</label>
-            <textarea name="address" rows="6" style={{ resize: 'none' }} id="address" value={formData.address} onChange={handleChange} className="mt-1 p-2 border rounded-md w-full" required></textarea>
+            <textarea name="address" rows="3" style={{ resize: 'none' }} id="address" value={formData.address} onChange={handleChange} className="mt-1 p-2 border rounded-md w-full" required></textarea>
           </div>
           <div className="flex items-center justify-center">
             <button type="submit" className="text-sm font-[650] text-white font-Poppins px-9 pt-2.5 pb-2.5  bg-[#403bbf] rounded-full hover:bg-opacity-75 transition duration-300">Next</button>
