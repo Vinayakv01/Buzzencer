@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import OrganizationLayout from '../layout/organizationlayouts';
-import Dashboard from '../organization/dashboard';
+import Dashboard from '../organization/odashboard';
 
 const ORouting = () => {
   return (
