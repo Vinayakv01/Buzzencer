@@ -4,7 +4,7 @@ import arrows from "../../assets/idashboardlogo/arrows.png";
 import stars from "../../assets/idashboardlogo/stars.png";
 import line from "../../assets/idashboardlogo/lines.png";
 import rupee from "../../assets/idashboardlogo/rupee.png";
-import ApexCharts from 'react-apexcharts';
+import ApexCharts from "react-apexcharts";
 
 const Dashboard = () => {
   // Array of JSON data with logos for containers
