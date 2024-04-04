@@ -50,7 +50,7 @@ const Dashboard = () => {
   ];
 
   // Array of background colors for containers
-  const colors = ['bg-gradient-to-r from-[#F5F5FC] to-[#E0E1EE]', 'bg-gradient-to-r from-[#F5F5FC] to-[#E4CEAA]', 'bg-gradient-to-r from-[#F5F5FC] to-[#DEF3DC]', 'bg-gradient-to-r from-[#F5F5FC] to-[#F3DCDE]', 'bg-gradient-to-r from-[#F5F5FC] to-[#CEF3F7]'];
+  const colors = ['bg-gradient-to-r from-[#F5F5FC] to-[#D3D2E6]', 'bg-gradient-to-r from-[#F5F5FC] to-[#F5DEB7]', 'bg-gradient-to-r from-[#F5F5FC] to-[#D4F0CE]', 'bg-gradient-to-r from-[#F5F5FC] to-[#F1CFCE]', 'bg-gradient-to-r from-[#F5F5FC] to-[#B7EEF5]'];
 
   return (
 
