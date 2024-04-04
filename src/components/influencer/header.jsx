@@ -67,45 +67,45 @@ const Header = () => {
       ]
     }
   ];
-  
 
-  
+
+
   return (
     <header className="bg-white text-black py-4 px-8 flex justify-end items-center">
       {/* Bell Icon */}
       <div className="relative">
-  <Bell size={24} className="cursor-pointer mr-5" onClick={toggleNotiDropdown} />
-  {notiDropdownOpen && (
-    <div className="absolute top-full right-0 mt-1 overflow-auto max-h-[calc(100vh-388px)] w-64 bg-white border border-gray-200 rounded-md shadow-lg z-10" ref={notiDropdownRef}>
-      <style>
-          {`
+        <Bell size={24} className="cursor-pointer mr-5" onClick={toggleNotiDropdown} />
+        {notiDropdownOpen && (
+          <div className="absolute top-full right-0 mt-1 overflow-auto max-h-[calc(100vh-388px)] w-64 bg-white border border-gray-200 rounded-md shadow-lg z-10" ref={notiDropdownRef}>
+            <style>
+              {`
             .overflow-auto::-webkit-scrollbar {
             display: none;
             }
           `}
-        </style>
-      <div className="flex justify-between px-4 py-2 border-b border-gray-200">
-        <p className="font-semibold">Notifications</p>
-        <button className="text-blue-500 hover:underline">See All</button>
-      </div>
-      {/* Iterate over notifications */}
-      {notifications.map(notificationType => (
-        <div key={notificationType.type}>
-          {/* Header */}
-          <div className="py-2 px-4 bg-gray-100 font-semibold">{notificationType.type}</div>
-          {/* Notification list */}
-          {notificationType.items.map(notification => (
-            <div key={notification.id} className="py-2 px-4 hover:bg-gray-100">
-              <div className="font-medium">{notification.brand}</div>
-              <div className="text-sm text-gray-600">{notification.time}</div>
-              <div>{notification.message}</div>
+            </style>
+            <div className="flex justify-between px-4 py-2 border-b border-gray-200">
+              <p className="font-semibold">Notifications</p>
+              <button className="text-blue-500 hover:underline">See All</button>
             </div>
-          ))}
-        </div>
-      ))}
-    </div>
-  )}
-</div>
+            {/* Iterate over notifications */}
+            {notifications.map(notificationType => (
+              <div key={notificationType.type}>
+                {/* Header */}
+                <div className="py-2 px-4 bg-gray-100 font-semibold">{notificationType.type}</div>
+                {/* Notification list */}
+                {notificationType.items.map(notification => (
+                  <div key={notification.id} className="py-2 px-4 hover:bg-gray-100">
+                    <div className="font-medium">{notification.brand}</div>
+                    <div className="text-sm text-gray-600">{notification.time}</div>
+                    <div>{notification.message}</div>
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
 
 
       <div className="flex items-center relative" ref={dropdownRef}>

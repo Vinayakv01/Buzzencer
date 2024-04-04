@@ -45,26 +45,26 @@ const Wishlist = () => {
 
   // Function to handle clearing selected brands
   // Function to handle clearing selected brands
-const handleClearSelection = () => {
-  const updatedBrands = brands.filter(brand => !selectedBrands.includes(brand.id));
-  setBrands(updatedBrands);
-  setSelectedBrands([]);
-};
+  const handleClearSelection = () => {
+    const updatedBrands = brands.filter(brand => !selectedBrands.includes(brand.id));
+    setBrands(updatedBrands);
+    setSelectedBrands([]);
+  };
 
 
   return (
     <div className="p-4 font-Montserrat bg-white m-4">
       <div className="flex justify-between">
-      {/* Search bar */}
-      <input
-        type="text"
-        placeholder=" Search your Brand"
-        className="px-4 py-2 border rounded-full w-5/12"
-      />
+        {/* Search bar */}
+        <input
+          type="text"
+          placeholder=" Search your Brand"
+          className="px-4 py-2 border rounded-full w-5/12"
+        />
 
-      {/* Add New button */}
-      <button className="text-sm font-[650] shadow-lg text-white font-Poppins px-9 pt-2.5 pb-2.5  bg-[#403bbf] rounded-full hover:bg-opacity-75 transition duration-300" onClick={() => setShowModal(true)}>Add New</button>
-    </div>
+        {/* Add New button */}
+        <button className="text-sm font-[650] shadow-lg text-white font-Poppins px-9 pt-2.5 pb-2.5  bg-[#403bbf] rounded-full hover:bg-opacity-75 transition duration-300" onClick={() => setShowModal(true)}>Add New</button>
+      </div>
       {/* Brands grid */}
       <div className="grid grid-cols-5 gap-4 mt-4">
         {brands.map((brand) => (
@@ -77,7 +77,7 @@ const handleClearSelection = () => {
             <input
               type="checkbox"
               checked={selectedBrands.includes(brand.id)}
-              onChange={() => {}}
+              onChange={() => { }}
               className=""
             />
           </div>

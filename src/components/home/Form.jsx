@@ -69,7 +69,7 @@ const ContactForm = () => {
           ></textarea>
         </div>
 
-        
+
         <div className="flex mb-16 text-sm font-Montserrat font-semibold justify-center">
           <button
             type="submit"
