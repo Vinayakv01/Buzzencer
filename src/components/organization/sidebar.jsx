@@ -3,7 +3,7 @@ import logo from "../../assets/hmain.png";
 import profile from "../../assets/hlogo.png";
 import { createContext, useContext, useState } from "react";
 import { Link } from "react-router-dom"; // Import Link from React Router DOM
-import { LayoutDashboard, Heart} from "lucide-react";
+import { LayoutDashboard, Heart } from "lucide-react";
 import { FaRegUser } from "react-icons/fa";
 import { RiMegaphoneLine } from "react-icons/ri";
 import { RiWallet3Line } from "react-icons/ri";
@@ -12,10 +12,10 @@ const SidebarContext = createContext();
 
 const sidebarItems = [
   { icon: <LayoutDashboard size={24} />, text: "Dashboard", path: "/odashboard" },
-  { icon: <FaRegUser size={24} />, text: "Profile",  path: "/profile" },
-  { icon: <RiMegaphoneLine size={24} />, text: "Campaign", path: "/campaign" },
-  { icon: <Heart size={24} />, text: "Wishlist", path: "/wishlist" },
-  { icon: <RiWallet3Line size={24} />, text: "Wallet", path: "/wallet" },
+  { icon: <FaRegUser size={24} />, text: "Create Campaign", path: "/createcampaign" },
+  { icon: <RiMegaphoneLine size={24} />, text: "Campaign List", path: "/campaignlist" },
+  { icon: <Heart size={24} />, text: "Influencer List", path: "/influencerlist" },
+  { icon: <RiWallet3Line size={24} />, text: "Request Influencer", path: "/requestinfluencer" },
 
 ];
 
@@ -26,8 +26,8 @@ export default function Sidebar() {
       <aside className="h-screen">
         <nav className="h-full flex flex-col bg-[#272323] border-r shadow-sm">
           <div className="p-4 pb-4 flex justify-between items-center border-b border-gray-400">
-          <Link to="/">
-            <img src={logo} className={`overflow-hidden transition-all ${expanded ? "w-32" : "w-0"}`} />
+            <Link to="/">
+              <img src={logo} className={`overflow-hidden transition-all ${expanded ? "w-32" : "w-0"}`} />
             </Link>
             <button onClick={() => setExpanded((curr) => !curr)} className="p-1.5 rounded-lg bg-[#272323] hover:bg-gray-800 text-white">
               {expanded ? <ChevronFirst /> : <ChevronLast />}
@@ -39,13 +39,13 @@ export default function Sidebar() {
               {sidebarItems.map((item, index) => (
                 <SidebarItem key={index} icon={item.icon} text={item.text} alert={item.alert} active={item.active} path={item.path} />
               ))}
-            </ul> 
+            </ul>
           </SidebarContext.Provider>
 
           <div className={` flex p-3 ${expanded ? "invisible" : "visible"}`}>
             <Link to="/">
-            <img src={profile} className="w-10 h-10 rounded-md " />
-          </Link>
+              <img src={profile} className="w-10 h-10 rounded-md " />
+            </Link>
           </div>
         </nav>
       </aside>
