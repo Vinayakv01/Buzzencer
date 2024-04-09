@@ -120,7 +120,7 @@ const Completed = () => {
 
             <span className="flex justify-between">
               <p className="text-black mt-3 text-sm font-semibold mb-2"><span className="font-normal">Campaign Earning:</span> {data.earning}</p>
-              <button className="text-sm px-9 pt-2.5 pb-2.5 bg-[#403bbf] hover:bg-blue-600 text-white rounded-full">View Details</button>
+              <button className="text-sm px-9 pt-2.5 pb-2.5 bg-[#403bbf] hover:bg-blue-600 text-white rounded-full relative lg:top-6">View Details</button>
             </span>
 
             <div className="mb-4 text-sm space-x-2 flex flex-row">

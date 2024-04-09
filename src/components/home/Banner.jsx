@@ -33,15 +33,15 @@ const Banner = () => {
               <img src={instagram} alt="instagram" className="sm:w-[30px] w-[20px]" />
             </div>
 
-            <div className="twitter-logo bg-white rounded-full p-3 sm:p-3 shadow-xl relative bottom-[240px] sm:bottom-[320px] right-9 sm:right-12 md:right-20 lg:right-32 md:bottom-[300px] lg:bottom-[420px] xl:bottom-[430px]  ">
+            <div className="twitter-logo bg-white rounded-full p-3 sm:p-3 shadow-xl relative bottom-[240px] sm:bottom-[320px] right-9 sm:right-12 md:right-20 lg:right-24 md:bottom-[300px] lg:bottom-[420px] xl:bottom-[430px]  ">
               <img src={twitter} alt="twitter" className="sm:w-[35px] w-[25px]" />
             </div>
 
-            <div className="youtube-logo bg-white rounded-full p-3 shadow-xl relative right-[30px] md:right-[60px] bottom-[300px] sm:bottom-[400px] md:bottom-[380px] lg:bottom-[440px] xl:bottom-[460px] ">
+            <div className="youtube-logo bg-white rounded-full p-3 shadow-xl relative right-[30px] md:right-[60px] lg:right-[40px] bottom-[300px] sm:bottom-[400px] md:bottom-[380px] lg:bottom-[440px] xl:bottom-[450px] ">
               <img src={youtube} alt="youtube" className="w-[25px]" />
             </div>
 
-            <div className="linkedin-logo bg-white rounded-full p-3 sm:p-4 shadow-xl relative  lg:left-10 sm:left-14 left-6 bottom-[305px] sm:bottom-[400px] md:bottom-[400px] lg:bottom-[510px] xl:bottom-[530px] ">
+            <div className="linkedin-logo bg-white rounded-full p-3 sm:p-4 shadow-xl relative  lg:left-14 sm:left-14 left-6 bottom-[305px] sm:bottom-[400px] md:bottom-[400px] lg:bottom-[510px] xl:bottom-[520px] ">
               <img src={linkedin} alt="linkedin" className="w-[25px]" />
             </div>
 
