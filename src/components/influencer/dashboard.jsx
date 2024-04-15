@@ -103,8 +103,7 @@ const Dashboard = () => {
               </div>
               <div className="flex flex-row space-x-3">
                 <p className="md:ml-3 text-sm ">Start Date: {data.details.start_date}</p>
-                <hr className="border-r border-black h-full ml-4" />
-
+c
                 <p className="text-sm">End Date: {data.details.end_date}</p>
               </div>
             </div>
