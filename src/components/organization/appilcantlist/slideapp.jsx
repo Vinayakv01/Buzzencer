@@ -29,7 +29,7 @@ const Sliderapp = () => {
       const width = activeListItem.offsetWidth;
       setUnderlineStyle({ left, width });
     }
-  }, [selectedItem]);
+  }, [selectedItem, underlineRef.current]);
 
   const renderComponent = () => {
     switch (selectedItem) {
