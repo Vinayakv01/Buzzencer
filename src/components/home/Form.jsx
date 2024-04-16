@@ -55,7 +55,9 @@ const ContactForm = () => {
             />
           </div>
         </div>
+        
         <div className="mb-10 font-Montserrat">
+          
           <label htmlFor="message" className="block text-gray-600 font-semibold  mb-2">
             Message
           </label>
@@ -65,8 +67,9 @@ const ContactForm = () => {
             rows="6"
             className="shadow-sm  mt-1  w-full sm:text-sm border  rounded-3xl p-3"
             placeholder="Message"
-            style={{ resize: 'none' }}
+            style={{ overflow: 'auto', resize: 'none' }}            
           ></textarea>
+          
         </div>
 
 
