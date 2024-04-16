@@ -96,7 +96,7 @@ const Reviewed = () => {
           <h4 className="text-gray-800 font-medium">Name</h4>
           <h4 className="text-gray-800 font-medium">Age</h4>
           <h4 className="text-gray-800 font-medium">Email</h4>
-          <h4 className="text-gray-800 font-medium ml-14">Interested</h4>
+          <h4 className="text-gray-800 font-medium ">Interested</h4>
           <h4 className="text-gray-800 font-medium"></h4>  
         </div>
         {userDatas.map((userData, index) => (
@@ -104,12 +104,12 @@ const Reviewed = () => {
             <h4 className="text-gray-800">{userData.name}</h4>
             <h4 className="text-gray-800">{userData.age}</h4>
             <h4 className="text-gray-800">{userData.email}</h4>
-            <div className="flex items-center justify-center">
+            <div className="flex items-center ">
               <IoCheckmark className="text-[#403bbf] h-5 w-5 hover:bg-[#403bbf] hover:text-white transition duration-300 rounded-md " />
               <hr className="border-r border-black h-5 mx-2" />
               <RxCross2 className="text-red-500 h-5 w-5 hover:bg-red-500 hover:text-white transition duration-300 rounded-md " />
             </div>
-            <button className="text-sm font-[650] text-white font-Poppins px-9 pt-2.5 pb-2.5  bg-[#403bbf] rounded-full hover:bg-opacity-75 transition duration-300">View Details</button>
+            <button className="text-sm font-[650] w-40 text-white font-Poppins px-9 pt-2.5 pb-2.5  bg-[#403bbf] rounded-full hover:bg-opacity-75 transition duration-300">View Details</button>
           </div>
         ))}
       </div>

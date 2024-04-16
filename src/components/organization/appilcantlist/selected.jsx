@@ -108,7 +108,7 @@ const Selected = () => {
             <div className="flex items-center justify-center">
              
             </div>
-            <button className="text-sm font-[650] text-white font-Poppins px-9 pt-2.5 pb-2.5  bg-[#403bbf] rounded-full hover:bg-opacity-75 transition duration-300">View Details</button>
+            <button className="text-sm font-[650] w-40 text-white font-Poppins px-9 pt-2.5 pb-2.5  bg-[#403bbf] rounded-full hover:bg-opacity-75 transition duration-300">View Details</button>
           </div>
         ))}
       </div>

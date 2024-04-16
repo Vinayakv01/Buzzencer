@@ -98,7 +98,7 @@ const Rejected = () => {
           <h4 className="text-gray-800 font-medium">Name</h4>
           <h4 className="text-gray-800 font-medium">Age</h4>
           <h4 className="text-gray-800 font-medium">Email</h4>
-          <h4 className="text-gray-800 font-medium ml-14"></h4>
+          <h4 className="text-gray-800 font-medium "></h4>
           <h4 className="text-gray-800 font-medium"></h4>  
         </div>
         {userDatas.map((userData, index) => (
@@ -106,10 +106,10 @@ const Rejected = () => {
             <h4 className="text-gray-800">{userData.name}</h4>
             <h4 className="text-gray-800">{userData.age}</h4>
             <h4 className="text-gray-800">{userData.email}</h4>
-            <div className="flex items-center justify-center">
+            <div className="flex items-center">
              
             </div>
-            <button className="text-sm font-[650] text-white font-Poppins px-9 pt-2.5 pb-2.5  bg-[#403bbf] rounded-full hover:bg-opacity-75 transition duration-300">View Details</button>
+            <button className="text-sm font-[650] w-40 text-white font-Poppins px-9 pt-2.5 pb-2.5  bg-[#403bbf] rounded-full hover:bg-opacity-75 transition duration-300">View Details</button>
           </div>
         ))}
       </div>
