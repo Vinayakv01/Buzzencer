@@ -66,7 +66,7 @@ const Banner = () => {
         </div>
         {/* section-2 */}
         <div className="mt-8">
-          <section className="container md:px-4 lg:px-0">
+          <section className="container md:px-4 lg:px-0 mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <div className="transform translate-y-[-150px] translate-x-[12px] md:translate-x-[40px]">
                 <img src={about} alt="SVG Image" className="lg:w-[420px] h-[400px] lg:h-[500px] " />
