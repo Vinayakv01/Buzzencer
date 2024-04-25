@@ -13,7 +13,7 @@ const Faq = () => {
   return (
     <div className="h-auto bg-white py-20">
       <div className="flex justify-center items-center">
-        <h2 className="font-bold text-3xl">Frequently Asked Questions.</h2>
+        <h2 className="font-bold font-Yeseva text-3xl">Frequently Asked Questions.</h2>
       </div>
       <div className="flex">
         {/* left content */}
