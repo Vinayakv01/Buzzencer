@@ -92,7 +92,7 @@ const Contact = () => {
           <span className="flex flex-row justify-center ">
             <button
               type="submit"
-              className="text-white text-sm font-[650] font-Poppins px-9 pt-2.5 pb-3  bg-[#403bbf] rounded-full hover:bg-opacity-75 transition duration-300"
+              className="text-white text-sm font-[650] font-Poppins px-9 pt-2.5 pb-2.5  bg-[#403bbf] rounded-full hover:bg-opacity-75 transition duration-300"
             >
               Send
             </button>
