@@ -16,7 +16,7 @@ const Footer = () => {
     style={{ display: 'flex' }}
     options={{
       height: 30,
-      amplitude: 35,
+      amplitude: 30,
       speed: 0.25,
       points: 6,
     }}
@@ -30,7 +30,7 @@ const Footer = () => {
 
             {/* Logo */}
             <div className="md:col-span-2 lg:col-span-1 mb-6 md:mb-0">
-              <img src={logo} alt="Logo" className="mb-6 mx-auto" />
+              <img src={logo} alt="Logo" className="mb-6 " />
               <div className="text-gray-400 text-left">
                 <p>
                   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
