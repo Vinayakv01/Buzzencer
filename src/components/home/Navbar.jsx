@@ -12,7 +12,7 @@ const NavBar = () => {
 
   return (
     <div className={` container  ${location.pathname === '/contact' ? 'bg-white' : 'bg-transparent'}`}>
-    <nav className={`py-4 px-8 container mx-auto  ${location.pathname === '/contact' ? 'bg-white' : 'bg-transparent'}`}>
+    <nav className={`py-4 px-8 container mx-auto ml-16  ${location.pathname === '/contact' ? 'bg-white' : 'bg-transparent'}`}>
       <div className="flex justify-between items-center">
         <div className="flex items-center space-x-2">
           <Link to="/">
