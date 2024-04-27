@@ -33,7 +33,7 @@ const Contact = () => {
 
       {/* Right side (Form) */}
       <div className="md:w-1/2 w-full flex items-center justify-center">
-        <form className="w-3/4  p-8 ">
+        <form className="  p-8 ">
           <div className="flex gap-4">
             <div className="mb-4 font-Poppins">
               <label htmlFor="name" className="block text-gray-600 mb-2 text-sm font-semibold ">
