@@ -1,5 +1,5 @@
 import React from 'react'
-import thlogo from '../../assets/thlogo.png';
+import thlogo from '../../assets/heartslogo.png';
 import number from '../../assets/number.png';
 import message from '../../assets/message.png';
 import location from '../../assets/location.png';
