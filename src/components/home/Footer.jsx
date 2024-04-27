@@ -9,17 +9,19 @@ import logo from '../../assets/buzzencer_logo.svg';
 const Footer = () => {
   return (
     <div>
-      <Wave
-        fill="#f7f7fd"
-        paused={false}
-        style={{ display: 'flex' }}
-        options={{
-          height: 95,
-          amplitude: 35,
-          speed: 0.25,
-          points: 6,
-        }}
-      />
+<div className="wave-container" style={{ height: '80px' }}>
+  <Wave
+    fill="#f7f7fd"
+    paused={false}
+    style={{ display: 'flex' }}
+    options={{
+      height: 30,
+      amplitude: 35,
+      speed: 0.25,
+      points: 6,
+    }}
+  />
+</div>
 
       <footer className="relative font-Montserrat bg-[#f7f7fd] text-black py-4">
 

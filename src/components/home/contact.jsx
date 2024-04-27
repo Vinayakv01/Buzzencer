@@ -29,7 +29,6 @@ const Contact = () => {
             <span>+91 1234567890</span>
           </li>
         </ul>
-
       </div>
 
       {/* Right side (Form) */}
