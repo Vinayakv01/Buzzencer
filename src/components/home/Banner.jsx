@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import bghome from "../../assets/bghome.webp";
 import banners from "../../assets/bnnr-pic.webp";
 import about from "../../assets/about-buzzencer.webp"
@@ -22,7 +23,18 @@ const Banner = () => {
           <div className="w-full md:w-1/2 md:ml-9 flex flex-col md:items-start items-center justify-center text-white px-6   lg:px-16 relative  md:top-0 sm:top-[480px] top-[360px]">
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-Yeseva  text-center md:text-left text-black">A WORLD WHERE YOU GET PAID TO <span className="text-[#403bbf]">SHOOT </span></h1>
             <p className="mt-4 text-black text-center md:text-left font-Montserrat font-thin">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
-            <button className="mt-6 px-8 pt-2.5 pb-3 bg-[#403bbf] hover:bg-blue-600 text-white text-sm font-Montserrat font-semibold rounded-full">Create Campaign</button>
+
+
+            {/* <button className="mt-6 px-8 pt-2.5 pb-3 bg-[#403bbf] hover:bg-blue-600 text-white text-sm font-Montserrat font-semibold rounded-full">Create Campaign</button> */}
+
+            <Link
+              to="/signin"
+              className="mt-6 px-8 pt-2.5 pb-3 bg-[#403bbf] hover:bg-opacity-75 transition duration-300 text-white text-sm font-Montserrat font-semibold rounded-full"
+            >
+              Create Campaign
+            </Link>
+
+
           </div>
           {/* Image on the Right */}
           <div className=" mt-40  md:w-1/2 relative md:bottom-0 md:ml-0 sm:ml-8 ml-4  sm:bottom-[260px] bottom-[355px]">
@@ -73,10 +85,18 @@ const Banner = () => {
               </div>
               {/* Heading and Paragraph on the Right */}
               <div className="mr-10 transform translate-y-[-150px] translate-x-[40px] md:translate-x-[60px]" >
-            
+
                 <h2 className="text-3xl lg:text-4xl font-Yeseva mb-4">About Buzzencer</h2>
                 <p className="text-lg  text-gray-700 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <button className="pt-1.5 pb-2 bg-[#403bbf] hover:bg-blue-600 text-white font-semibold  px-4 rounded-full">Know More</button>
+                {/* <button className="pt-1.5 pb-2 bg-[#403bbf] hover:bg-blue-600 text-white font-semibold  px-4 rounded-full">Know More</button> */}
+
+                <Link
+                  to="/about"
+                  className="mt-6 px-8 pt-2.5 pb-3 bg-[#403bbf] hover:bg-opacity-75 transition duration-300 text-white text-sm font-Montserrat font-semibold rounded-full"
+                >
+                  Know More
+                </Link>
+
               </div>
             </div>
           </section>

@@ -55,9 +55,9 @@ const ContactForm = () => {
             />
           </div>
         </div>
-        
+
         <div className="mb-10 font-Montserrat">
-          
+
           <label htmlFor="message" className="block text-gray-600 font-semibold  mb-2">
             Message
           </label>
@@ -67,16 +67,16 @@ const ContactForm = () => {
             rows="6"
             className="shadow-sm  mt-1  w-full sm:text-sm border  rounded-3xl p-3"
             placeholder="Message"
-            style={{ overflow: 'auto', resize: 'none' }}            
+            style={{ overflow: 'auto', resize: 'none' }}
           ></textarea>
-          
+
         </div>
 
 
         <div className="flex mb-16 text-sm font-Montserrat font-semibold justify-center">
           <button
             type="submit"
-            className=" bg-[#403BBF] text-white rounded-full pt-3.5 pb-4 px-8 "
+            className=" bg-[#403BBF] hover:bg-opacity-75 transition duration-300 text-white rounded-full pt-3.5 pb-4 px-8 "
           >
             Submit
           </button>

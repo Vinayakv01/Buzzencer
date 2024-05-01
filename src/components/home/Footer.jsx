@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { LuFacebook } from 'react-icons/lu';
 import { CiTwitter } from 'react-icons/ci';
 import { IoLogoInstagram } from 'react-icons/io';
@@ -9,19 +10,19 @@ import logo from '../../assets/buzzencer_logo.svg';
 const Footer = () => {
   return (
     <div>
-<div className="wave-container" style={{ height: '80px' }}>
-  <Wave
-    fill="#f7f7fd"
-    paused={false}
-    style={{ display: 'flex' }}
-    options={{
-      height: 30,
-      amplitude: 30,
-      speed: 0.25,
-      points: 6,
-    }}
-  />
-</div>
+      <div className="wave-container" style={{ height: '80px' }}>
+        <Wave
+          fill="#f7f7fd"
+          paused={false}
+          style={{ display: 'flex' }}
+          options={{
+            height: 30,
+            amplitude: 30,
+            speed: 0.25,
+            points: 6,
+          }}
+        />
+      </div>
 
       <footer className="relative font-Montserrat bg-[#f7f7fd] text-black py-4">
 
@@ -41,12 +42,12 @@ const Footer = () => {
             {/* Contact Us */}
             <div className="md:col-span-2 lg:col-span-1">
               <p className="font-bold mb-2 md:mb-7 mt-4">Contact Us</p>
-              <p className="text-gray-400">Narmada Fresh Fruit Exports Flat No.4, Prashant Appt, Nashik - 422 009, Maharashtra</p>
+              <p className="text-gray-400">Unipolar Technologies, CasaBlanca, Belapur</p>
               <div className="text-gray-400 mt-2">
-                <a href="tel:9218540407">+91 9218540407</a>
+                <a href="tel:1234567890">+91 1234567890</a>
               </div>
               <div className="text-gray-400">
-                <a href="mailto:sanjay@narmadafresh.com">sanjay@narmadafresh.com</a>
+                <a href="mailto:contact@unipolar.in">contact@unipolar.in</a>
               </div>
             </div>
 
@@ -54,8 +55,9 @@ const Footer = () => {
             <div className="lg:col-span-1">
               <p className="font-bold text-base mb-2 md:mb-7 mt-4">Quick Links</p>
               <ul className="text-gray-400">
-                <li><a href="/">Faq</a></li>
-                <li><a href="/">Sitemap</a></li>
+                <li>
+                  <Link to="/faq" className=" hover:text-[#403bbf] transition duration-500">Faq</Link>
+                </li>                <li><a href="/">Sitemap</a></li>
                 <li><a href="/">T & C</a></li>
               </ul>
             </div>
