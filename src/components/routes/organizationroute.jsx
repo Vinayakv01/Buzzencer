@@ -12,10 +12,10 @@ const ORouting = () => {
     <Routes>
       <Route element={<OrganizationLayout />}>
         <Route path="/odashboard" index element={<Dashboard />} />
-        <Route path="createcampaign" element={<Createcampaign/>} />
-        <Route path="campaignlist" element={<Campaignlist/>} />
-        <Route path="influencerlist" element={<Influencerlist/>} />
-        <Route path="requestinfluencer" element={<Requestinfluencer/>} />
+        <Route path="ocreatecampaign" element={<Createcampaign/>} />
+        <Route path="ocampaignlist" element={<Campaignlist/>} />
+        <Route path="oinfluencerlist" element={<Influencerlist/>} />
+        <Route path="orequestinfluencer" element={<Requestinfluencer/>} />
       </Route>
     </Routes>
   );

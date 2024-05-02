@@ -12,10 +12,10 @@ const SidebarContext = createContext();
 
 const sidebarItems = [
   { icon: <LayoutDashboard size={24} />, text: "Dashboard", path: "/odashboard" },
-  { icon: <FaRegUser size={24} />, text: "Create Campaign", path: "/createcampaign" },
-  { icon: <RiMegaphoneLine size={24} />, text: "Campaign List", path: "/campaignlist" },
-  { icon: <Heart size={24} />, text: "Influencer List", path: "/influencerlist" },
-  { icon: <RiWallet3Line size={24} />, text: "Request Influencer", path: "/requestinfluencer" },
+  { icon: <FaRegUser size={24} />, text: "Create Campaign", path: "/ocreatecampaign" },
+  { icon: <RiMegaphoneLine size={24} />, text: "Campaign List", path: "/ocampaignlist" },
+  // { icon: <Heart size={24} />, text: "Influencer List", path: "/influencerlist" },
+  // { icon: <RiWallet3Line size={24} />, text: "Request Influencer", path: "/requestinfluencer" },
 
 ];
 
