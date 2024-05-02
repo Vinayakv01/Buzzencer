@@ -2,13 +2,13 @@
 import React from 'react'
 import Routing from './components/routes/routes'
 import InRouting from './components/routes/influencerroute'
-import ORouting from './components/routes/organizationroute'
+import ARouting from './components/routes/adminroute'
 const App = () => {
   return (
     <>
       <Routing/>
       <InRouting/>
-      <ORouting/>
+      <ARouting/>
     </>
   )
 }

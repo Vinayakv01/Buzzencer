@@ -1,7 +1,7 @@
 import React from 'react';
-import Sidebar from '../organization/sidebar';
+import Sidebar from '../admin/sidebar';
 import { Outlet } from 'react-router-dom';
-import Header from '../organization/header';
+import Header from '../admin/header';
 const OrganizationLayout = () => {
   return (
     <div className="flex h-screen">

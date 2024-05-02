@@ -11,7 +11,7 @@ import { RiWallet3Line } from "react-icons/ri";
 const SidebarContext = createContext();
 
 const sidebarItems = [
-  { icon: <LayoutDashboard size={24} />, text: "Dashboard", path: "/odashboard" },
+  { icon: <LayoutDashboard size={24} />, text: "Dashboard", path: "/admin" },
   { icon: <FaRegUser size={24} />, text: "Create Campaign", path: "/createcampaign" },
   { icon: <RiMegaphoneLine size={24} />, text: "Campaign List", path: "/campaignlist" },
   { icon: <Heart size={24} />, text: "Influencer List", path: "/influencerlist" },
