@@ -2,7 +2,7 @@ import React from 'react';
 import Sidebar from '../admin/sidebar';
 import { Outlet } from 'react-router-dom';
 import Header from '../admin/header';
-const AdminLayout = () => {
+const OrganizationLayout = () => {
   return (
     <div className="flex h-screen">
       {/* Side Navigation */}
@@ -25,4 +25,4 @@ const AdminLayout = () => {
   );
 };
 
-export default AdminLayout;
+export default OrganizationLayout;
