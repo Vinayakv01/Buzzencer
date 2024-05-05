@@ -8,7 +8,7 @@ import Select from 'react-select';
 import CustomDatePicker from './CustomDatePicker';
 import Modal from './Modal'; // Assuming you have a Modal component
 import profile from '../../assets/profile.png';
-import congrats from "../../assets/okay.jpg";
+import congrats from "../../assets/okay.png";
 
 const MultiStepForm = () => {
   const [step, setStep] = useState(1);
