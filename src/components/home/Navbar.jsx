@@ -11,10 +11,11 @@ const NavBar = () => {
   };
 
   return (
-    <div className={` container  ${location.pathname === '/contact' ? 'bg-white' : 'bg-transparent'}`}>
-    <nav className={`py-4 px-8 container mx-auto ml-16  ${location.pathname === '/contact' ? 'bg-white' : 'bg-transparent'}`}>
+    <div className={` md:mx-20 ${location.pathname === '/contact' ? 'bg-white' : 'bg-transparent'}`}>
+    <nav className={`py-4 px-8 ${location.pathname === '/contact' ? 'bg-white' : 'bg-transparent'}`}>
       <div className="flex justify-between items-center">
-        <div className="flex items-center space-x-2">
+        <div >
+        {/* className="flex items-center space-x-2" */}
           <Link to="/">
             <img src={buzzencer_logo} alt="G Logo" className="h-9" />
           </Link>
@@ -30,7 +31,7 @@ const NavBar = () => {
         </div>
 
         <div className="hidden lg:flex space-x-5 items-center">
-          <div className="space-x-6 font-Poppins  flex items-center">
+          <div className="space-x-6 font-Poppins ">
             <Link
               to="/"
               className={` ${location.pathname === '/' ? 'text-blue-600' : 'text-black'}  hover:text-gray-500`}

@@ -8,7 +8,7 @@ const Layout = () => {
 
   // Function to check if current location is one of the specified routes
   const shouldOverlapFooter = () => {
-    const overlapRoutes = ['/contact', '/signin', '/signup'];
+    const overlapRoutes = [ '/about', '/contact', '/signin', '/signup'];
     return overlapRoutes.includes(location.pathname);
   };
 

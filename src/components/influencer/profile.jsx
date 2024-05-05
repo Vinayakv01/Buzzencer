@@ -8,7 +8,7 @@ import Select from 'react-select';
 import CustomDatePicker from './CustomDatePicker';
 import Modal from './Modal'; // Assuming you have a Modal component
 import profile from '../../assets/profile.png';
-
+import congrats from "../../assets/okay.jpg";
 
 const MultiStepForm = () => {
   const [step, setStep] = useState(1);
@@ -538,19 +538,20 @@ const MultiStepForm = () => {
 
       {/* Modal */}
       {showModal && (
-        <Modal onClose={closeModal}>
-          <div className="flex items-center justify-center">
-            {/* Image */}
-            <img src="your-image-url.jpg" alt="Congratulations" className="w-1/2" />
+  <Modal onClose={closeModal} alt="Congratulations">
+    <div className="flex items-center justify-center">
+      {/* Image */}
+      <img src={congrats} className="" />
 
-            {/* Text */}
-            <div className="w-1/2">
-              <h2 className="text-2xl font-bold mb-4">Congratulations!</h2>
-              <p className="text-lg">Your profile is complete.</p>
-            </div>
-          </div>
-        </Modal>
-      )}
+      {/* Text */}
+      <div className="w-1/2">
+        <h2 className="text-2xl font-bold mb-4">Congratulations!</h2>
+        <p className="text-lg">Your profile is complete.</p>
+      </div>
+    </div>
+  </Modal>
+)}
+
     </div>
 
   );
