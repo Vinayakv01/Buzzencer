@@ -17,9 +17,11 @@ const SliderOptions = () => {
     localStorage.setItem('selectedItem', item);
   };
 
-  const [underlineStyle, setUnderlineStyle] = useState({ width: 0, left: 0 });
+  // Reference to the underline element
   const underlineRef = useRef(null);
+  const [underlineStyle, setUnderlineStyle] = useState({ width: 0, left: 0 });
 
+  // Update underline position when selectedItem changes
   useEffect(() => {
     const activeListItem = document.querySelector(`#tab-${selectedItem}`);
     if (activeListItem) {
@@ -29,6 +31,7 @@ const SliderOptions = () => {
     }
   }, [selectedItem]);
 
+  // Render the selected component
   const renderComponent = () => {
     switch (selectedItem) {
       case "Active":
@@ -45,7 +48,6 @@ const SliderOptions = () => {
         return null;
     }
   };
-
   return (
     <div className="bg-gray-100 p-4">
       <div>
