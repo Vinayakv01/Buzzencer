@@ -11,7 +11,7 @@ const NavBar = () => {
   };
 
   return (
-    <div className={` md:mx-20 ${location.pathname === '/contact' ? 'bg-white' : 'bg-transparent'}`}>
+    <div className={` md:px-20 w-full ${location.pathname === '/contact' ? 'bg-white' : 'bg-transparent'}`}>
     <nav className={`py-4 px-8 ${location.pathname === '/contact' ? 'bg-white' : 'bg-transparent'}`}>
       <div className="flex justify-between items-center">
         <div >
