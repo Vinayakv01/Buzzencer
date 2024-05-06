@@ -247,7 +247,7 @@ const MultiStepForm = () => {
                   { value: 'Female', label: 'Female' },
                   { value: 'Other', label: 'Other' }
                 ]}
-                placeholder="Select Gender"
+                placeholder="Select Type"
                 styles={customStyles}
 
                 isSearchable={false}
