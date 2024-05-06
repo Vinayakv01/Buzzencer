@@ -43,7 +43,7 @@ const Contact = () => {
                 type="text"
                 id="name"
                 name="name"
-                className="w-full border px-6 pt-2 pb-2.5 rounded-full"
+                className="w-full border px-6 pt-3 pb-3 rounded-full"
                 placeholder="Enter Name"
               />
             </div>
@@ -55,7 +55,7 @@ const Contact = () => {
                 type="phone no"
                 id="phone no"
                 name="phone no"
-                className="w-full border px-6 pt-2 pb-2.5 rounded-full"
+                className="w-full border px-6 pt-3 pb-3 rounded-full"
                 placeholder="Enter Phone No"
               />
             </div>
@@ -69,13 +69,13 @@ const Contact = () => {
               type="email id"
               id="email id"
               name="email id"
-              className="w-full border px-6 pt-2 pb-2.5 rounded-full"
+              className="w-full border px-6 pt-3 pb-3 rounded-full"
               placeholder="Enter Email Id"
             />
           </div>
           <div className="mb-10 font-Montserrat">
 
-            <label htmlFor="message" className="block text-gray-600 font-semibold  mb-2">
+            <label htmlFor="message" className="block text-gray-600 font-semibold text-sm mb-2">
               Message
             </label>
             <textarea
@@ -92,7 +92,7 @@ const Contact = () => {
           <span className="flex flex-row justify-center ">
             <button
               type="submit"
-              className="text-white text-sm font-[650] font-Poppins px-9 pt-2.5 pb-2.5  bg-[#403bbf] rounded-full hover:bg-opacity-75 transition duration-300"
+              className="text-white text-sm font-[650] font-Poppins px-9 pt-3 pb-3  bg-[#403bbf] rounded-full hover:bg-opacity-75 transition duration-300"
             >
               Send
             </button>

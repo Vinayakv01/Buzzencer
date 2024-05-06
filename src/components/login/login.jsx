@@ -24,7 +24,7 @@ const Login = () => {
               type="text"
               id="username"
               name="username"
-              className="w-full border px-6 pt-3 pb-3.5 rounded-full"
+              className="w-full border px-6 pt-3 pb-3 border-gray-300 focus:outline-[#403bbf] rounded-full"
               placeholder="Enter User Name"
             />
           </div>
@@ -36,7 +36,7 @@ const Login = () => {
               type="password"
               id="password"
               name="password"
-              className="w-full border px-6 pt-3 pb-3.5 rounded-full"
+              className="w-full border px-6 pt-3 pb-3 border-gray-300 focus:outline-[#403bbf] rounded-full"
               placeholder="Enter Password"
             />
           </div>
@@ -53,7 +53,7 @@ const Login = () => {
           </button>
           </span>
          <p className="mt-4 text-sm text-center text-gray-600  font-Poppins">
-          Don't have an account? <Link to="/signup" className="text-blue-500">Sign up</Link>.
+          Don't have an account? <Link to="/signup" className="text-[#403bbf] ">Sign up</Link>.
          </p>
         </form>
       </div>

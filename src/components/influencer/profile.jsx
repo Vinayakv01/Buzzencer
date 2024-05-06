@@ -144,8 +144,11 @@ const MultiStepForm = () => {
     }),
     control: (provided, state) => ({
       ...provided,
-      borderRadius: '20px',
-      boxShadow: state.isFocused ? '0 0 0 1 px #403bbf' : 'none',
+      borderRadius: '40px',
+      boxShadow: state.isFocused ? '0 0 0 1px #403bbf' : 'none',
+      padding: '2px', // Add padding here
+      outline: 'none', // Remove default outline
+      border: state.isFocused ? '1px solid #403bbf' : '1px solid #e5e7eb', // Add border when focused
     }),
     option: (provided, state) => ({
       ...provided,
@@ -212,15 +215,15 @@ const MultiStepForm = () => {
           <div className="mb-4 flex space-x-4">
             <div className="w-1/3">
               <label htmlFor="firstName" className="block font-medium">First Name</label>
-              <input type="text" name="firstName" id="firstName" value={formData.firstName} onChange={handleChange} className="mt-1 p-2 border rounded-full w-full" required />
+              <input type="text" name="firstName" id="firstName" value={formData.firstName} onChange={handleChange} className="mt-1 p-2 border border-gray-300 focus:outline-[#403bbf] rounded-full w-full"  />
             </div>
             <div className="w-1/3">
               <label htmlFor="lastName" className="block font-medium">Last Name</label>
-              <input type="text" name="lastName" id="lastName" value={formData.lastName} onChange={handleChange} className="mt-1 p-2 border rounded-full w-full" required />
+              <input type="text" name="lastName" id="lastName" value={formData.lastName} onChange={handleChange} className="mt-1 p-2 border rounded-full border-gray-300 focus:outline-[#403bbf] w-full"  />
             </div>
             <div className="w-1/3">
               <label htmlFor="userName" className="block font-medium">User Name</label>
-              <input type="text" name="userName" id="userName" value={formData.userName} onChange={handleChange} className="mt-1 p-2 border rounded-full w-full" required />
+              <input type="text" name="userName" id="userName" value={formData.userName} onChange={handleChange} className="mt-1 p-2 border border-gray-300 focus:outline-[#403bbf] rounded-full w-full"  />
             </div>
           </div>
           <div className="mb-4 flex space-x-4">
@@ -249,7 +252,7 @@ const MultiStepForm = () => {
 
                 isSearchable={false}
                 className="mt-1 border rounded-full w-full"
-                required
+                
               />
             </div>
             <div className="w-1/3">
@@ -268,7 +271,7 @@ const MultiStepForm = () => {
                 styles={customStyles}
 
                 className="mt-1  border rounded-full w-full"
-                required
+                
               />
             </div>
           </div>
@@ -289,7 +292,7 @@ const MultiStepForm = () => {
                 styles={customStyles}
 
                 className="mt-1  border rounded-full w-full"
-                required
+                
               />
             </div>
             <div className="w-1/3">
@@ -308,17 +311,17 @@ const MultiStepForm = () => {
                 styles={customStyles}
 
                 className="mt-1  border rounded-full w-full"
-                required
+                
               />
             </div>
             <div className="w-1/3">
               <label htmlFor="pincode" className="block font-medium">Pincode</label>
-              <input type="text" name="pincode" id="pincode" value={formData.pincode} onChange={handleChange} className="mt-1 p-2 border rounded-full w-full" required />
+              <input type="text" name="pincode" id="pincode" value={formData.pincode} onChange={handleChange} className="mt-1 p-2 border-gray-300 focus:outline-[#403bbf] border rounded-full w-full"  />
             </div>
           </div>
           <div className="mb-2">
             <label htmlFor="address" className="block font-medium">Address</label>
-            <textarea name="address" rows="3" style={{ resize: 'none' }} id="address" value={formData.address} onChange={handleChange} className="mt-1 p-2 border rounded-md w-full" required></textarea>
+            <textarea name="address" rows="3" style={{ resize: 'none' }} id="address" value={formData.address} onChange={handleChange} className="mt-1 p-2 border-gray-300 focus:outline-[#403bbf] border rounded-md w-full" ></textarea>
           </div>
           <div className="flex items-center justify-center">
             <button type="submit" className="text-sm font-[650] text-white font-Poppins px-9 pt-2.5 pb-2.5  bg-[#403bbf] rounded-full hover:bg-opacity-75 transition duration-300">Next</button>

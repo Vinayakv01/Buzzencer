@@ -11,7 +11,7 @@ const CustomDatePicker = ({ selectedDate, handleChange }) => {
       dateFormat="yyyy-MM-dd"
       isClearable
       placeholderText="Select Date"
-      required
+      
       popperClassName="z-50"
       calendarClassName="bg-white border rounded-md shadow-lg"
       wrapperClassName="relative"
