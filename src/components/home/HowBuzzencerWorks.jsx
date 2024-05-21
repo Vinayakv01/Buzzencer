@@ -6,9 +6,9 @@
 //     <section className="relative">
 //       {/* Background Image */}
 //       <img src={how} alt="How Buzzencer Works" className="w-full h-auto" />
-      
+
 //       {/* Text Overlay */}
-  
+
 //     </section>
 //   );
 // };
@@ -25,8 +25,10 @@ import star from "../../assets/star.png";
 import users from "../../assets/users.png";
 import eye from "../../assets/eye.png";
 import arrow from "../../assets/arrow.png";
-import background from "../../assets/Desktop - 2.png"; // Placeholder background image
+import background from "../../assets/Desktop.png"; // Placeholder background image
 import bghow from "../../assets/map.png";
+import rupiya from "../../assets/rupiya.png";
+
 const HowBuzzencerWorks = () => {
   const [isMobileView, setIsMobileView] = useState(false);
 
@@ -47,40 +49,53 @@ const HowBuzzencerWorks = () => {
       {/* Conditional rendering based on mobile view */}
       {isMobileView ? (
         <div className="flex flex-col font-Poppins px-4 items-center w-full py-4 bg-cover bg-center bg-white" style={{ backgroundImage: `url(${bghow})` }}>
-          
+
           <h1 className="font-Yeseva text-2xl mb-8 mt-4">How Buzzencer Works</h1>
           <div className="flex flex-col items-center">
             <span className="flex flex-col items-center space-y-2">
-          <img src={arrow} alt="Arrow" className="w-24 h-24" />
-          <h2 className="font-semibold text-xl">Login / Sign up</h2>
-          <p className="text-center">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          </p>
-          </span>
+              <img src={arrow} alt="Arrow" className="w-24 h-24" />
+              <h2 className="font-bold text-xl">Step 1</h2>
+              <h2 className="font-semibold text-xl">Login / Sign up</h2>
+              <p className="text-center">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              </p>
+            </span>
 
-          <span className="flex flex-col items-center space-y-2">
-          <img src={users} alt="Arrow" className="w-24 h-24" />
-          <h2 className="font-semibold text-xl">Create Your Profile</h2>
-          <p className="text-center">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          </p>
-          </span>
+            <span className="flex flex-col items-center space-y-2">
+              <img src={users} alt="Arrow" className="w-24 h-24" />
+              <h2 className="font-bold text-xl">Step 2</h2>
+              <h2 className="font-semibold text-xl">Create Your Profile</h2>
+              <p className="text-center">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              </p>
+            </span>
 
-          <span className="flex flex-col items-center space-y-2">
-          <img src={eye} alt="Arrow" className="w-24 h-24" />
-          <h2 className="font-semibold text-xl">Find Campaign</h2>
-          <p className="text-center">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          </p>
-          </span>
+            <span className="flex flex-col items-center space-y-2">
+              <img src={eye} alt="Arrow" className="w-24 h-24" />
+              <h2 className="font-bold text-xl">Step 3</h2>
+              <h2 className="font-semibold text-xl">Find Campaign</h2>
+              <p className="text-center">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              </p>
+            </span>
 
-          <span className="flex flex-col items-center space-y-2">
-          <img src={star} alt="Arrow" className="w-24 h-24" />
-          <h2 className="font-semibold text-xl">Work with brands</h2>
-          <p className="text-center">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          </p>
-          </span>
+            <span className="flex flex-col items-center space-y-2">
+              <img src={star} alt="Arrow" className="w-24 h-24" />
+              <h2 className="font-bold text-xl">Step 4</h2>
+              <h2 className="font-semibold text-xl">Work with brands</h2>
+              <p className="text-center">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              </p>
+            </span>
+
+            <span className="flex flex-col items-center space-y-2">
+              <img src={rupiya} alt="Arrow" className="w-24 h-24" />
+              <h2 className="font-bold text-xl">Step 5</h2>
+              <h2 className="font-semibold text-xl">Get Paid</h2>
+              <p className="text-center">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              </p>
+            </span>
 
           </div>
         </div>
