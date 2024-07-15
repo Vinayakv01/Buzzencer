@@ -1,23 +1,151 @@
-import React from "react";
+// import React from "react";
+// import loginImg from "../../assets/login.svg";
+// import { Link } from 'react-router-dom';
+
+// const Login = () => {
+//   return (
+//     <div className="md:flex h-screen">
+//       {/* Left side (Image) */}
+
+//       <div className="w-1/2 bg-blue-200 flex items-center justify-center">
+//         <img src={loginImg} alt="Login" className="w-9/12" />
+//       </div>
+
+//       {/* Right side (Form) */}
+//       <div className="md:w-1/2 w-full flex items-center justify-center">
+//         <form className="w-3/4  p-8 ">
+//           <h2 className="text-3xl text-center font-semibold font-Poppins mb-1">Welcome</h2>
+//           <p className="text-center font-Poppins mb-6">Sign-In to your Buzzencer Account.</p>
+//           <div className="mb-4 font-Poppins">
+//             <label htmlFor="username" className="block text-gray-600 mb-2 text-sm font-semibold ">
+//               Username
+//             </label>
+//             <input
+//               type="text"
+//               id="username"
+//               name="username"
+//               className="w-full border px-6 pt-3 pb-3 border-gray-300 focus:outline-[#403bbf] rounded-full"
+//               placeholder="Enter User Name"
+//             />
+//           </div>
+//           <div className="mb-4 font-Poppins">
+//             <label htmlFor="password" className="block text-gray-600 mb-2 text-sm font-semibold ">
+//               Password
+//             </label>
+//             <input
+//               type="password"
+//               id="password"
+//               name="password"
+//               className="w-full border px-6 pt-3 pb-3 border-gray-300 focus:outline-[#403bbf] rounded-full"
+//               placeholder="Enter Password"
+//             />
+//           </div>
+        
+//          <p className="flex flex-row justify-end font-Poppins text-[#403bbf]">
+//           Forget Password?
+//          </p>
+//         <span className="flex flex-row justify-center ">
+//          <button
+//             type="submit"
+//             className="text-white text-sm font-[650] font-Poppins px-9 pt-2.5 pb-3  bg-[#403bbf] rounded-full hover:bg-opacity-75 transition duration-300"
+//           >
+//             Login
+//           </button>
+//           </span>
+//          <p className="mt-4 text-sm text-center text-gray-600  font-Poppins">
+//           Don't have an account? <Link to="/signup" className="text-[#403bbf] ">Sign up</Link>.
+//          </p>
+//         </form>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Login;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import React, { useState } from "react";
 import loginImg from "../../assets/login.svg";
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 
 const Login = () => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState(null);
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch('http://buzzapi.barecms.com/api/user/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username, password }),
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        // Assuming your API returns a token upon successful login
+        localStorage.setItem('token', data.token);
+
+        // Redirect based on user role (example: admin goes to /admin, influencer to /dashboard)
+        // Example redirection based on role (you may need to adjust based on your actual role handling)
+        if (data.role === 'admin') {
+          return <Navigate to="/admin" />;
+        } else if (data.role === 'influencer') {
+          return <Navigate to="/dashboard" />;
+        } else {
+          setError("Unknown role");
+        }
+      } else {
+        const errorData = await response.json();
+        setError(errorData.message);
+      }
+    } catch (error) {
+      console.error('Login failed:', error);
+      setError("Login failed. Please try again.");
+    }
+  };
+
   return (
     <div className="md:flex h-screen">
       {/* Left side (Image) */}
-
       <div className="w-1/2 bg-blue-200 flex items-center justify-center">
         <img src={loginImg} alt="Login" className="w-9/12" />
       </div>
 
       {/* Right side (Form) */}
       <div className="md:w-1/2 w-full flex items-center justify-center">
-        <form className="w-3/4  p-8 ">
+        <form className="w-3/4 p-8" onSubmit={handleLogin}>
           <h2 className="text-3xl text-center font-semibold font-Poppins mb-1">Welcome</h2>
           <p className="text-center font-Poppins mb-6">Sign-In to your Buzzencer Account.</p>
+          {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
           <div className="mb-4 font-Poppins">
-            <label htmlFor="username" className="block text-gray-600 mb-2 text-sm font-semibold ">
+            <label htmlFor="username" className="block text-gray-600 mb-2 text-sm font-semibold">
               Username
             </label>
             <input
@@ -26,10 +154,13 @@ const Login = () => {
               name="username"
               className="w-full border px-6 pt-3 pb-3 border-gray-300 focus:outline-[#403bbf] rounded-full"
               placeholder="Enter User Name"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              required
             />
           </div>
           <div className="mb-4 font-Poppins">
-            <label htmlFor="password" className="block text-gray-600 mb-2 text-sm font-semibold ">
+            <label htmlFor="password" className="block text-gray-600 mb-2 text-sm font-semibold">
               Password
             </label>
             <input
@@ -38,23 +169,25 @@ const Login = () => {
               name="password"
               className="w-full border px-6 pt-3 pb-3 border-gray-300 focus:outline-[#403bbf] rounded-full"
               placeholder="Enter Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
             />
           </div>
-        
-         <p className="flex flex-row justify-end font-Poppins text-[#403bbf]">
-          Forget Password?
-         </p>
-        <span className="flex flex-row justify-center ">
-         <button
-            type="submit"
-            className="text-white text-sm font-[650] font-Poppins px-9 pt-2.5 pb-3  bg-[#403bbf] rounded-full hover:bg-opacity-75 transition duration-300"
-          >
-            Login
-          </button>
-          </span>
-         <p className="mt-4 text-sm text-center text-gray-600  font-Poppins">
-          Don't have an account? <Link to="/signup" className="text-[#403bbf] ">Sign up</Link>.
-         </p>
+          <p className="flex flex-row justify-end font-Poppins text-[#403bbf]">
+            Forget Password?
+          </p>
+          <div className="flex justify-center mt-4">
+            <button
+              type="submit"
+              className="text-white text-sm font-[650] font-Poppins px-9 pt-2.5 pb-3 bg-[#403bbf] rounded-full hover:bg-opacity-75 transition duration-300"
+            >
+              Login
+            </button>
+          </div>
+          <p className="mt-4 text-sm text-center text-gray-600 font-Poppins">
+            Don't have an account? <Link to="/signup" className="text-[#403bbf]">Sign up</Link>.
+          </p>
         </form>
       </div>
     </div>
@@ -62,6 +195,28 @@ const Login = () => {
 };
 
 export default Login;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
