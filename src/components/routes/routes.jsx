@@ -41,7 +41,7 @@ import About from '../home/about';
 import Contact from '../home/contact';
 import Login from '../login/login';
 import Signup from '../login/signup';
-import Faq from '../home/faq';
+import Faq from '../home/Faq';
 
 // Influencer routes
 import InfluencerDashboard from '../influencer/dashboard';
